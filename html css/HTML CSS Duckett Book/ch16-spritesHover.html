@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML: image sprites and hover links</title>
+	<style type="text/css">
+		a.button {
+			height: 100px;
+			width: 300px;
+			background-image: url("assets/pacSprite.png");
+			display: inline-block;
+		}
+		a#one {
+			background-position: 0px 0px;
+		}
+		a#two {
+			background-position: 0px -100px;
+		}
+		a#one:hover, a#two:hover {
+			background-position: 0px 100px;
+		}
+		a#one:active {
+			background-position: 0px -100px;
+		}
+		a#two:active {
+			background-position: 0px 0px;
+		}
+	</style>
+</head>
+<body>
+
+<a class="button" id="one"></a>
+<a class="button" id="two"></a>
+
+</body>
+</html>

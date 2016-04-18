@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML: boxes</title>
+	<style type="text/css">
+		#one {
+			width: 200px;
+			height: 200px;
+			background-color: hsl(330,100%,50%);
+		}
+		#two {
+			width: 300px;
+			height: 100px;
+			background-color: rgba(0,0,0,0.5);
+			position: relative;
+			top: -50px;
+			left: 100px;
+		}
+		#three {
+			background-color: hsla(192,76%,40%,1);
+		}
+		#threesub {
+			width: 75%;
+			background-color: lightblue;
+		}
+		#threesub p {
+			width: 50%;
+			background-color: lightgreen;
+		}
+		div {
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="one">wow!</div>
+	<div id="two">it works!</div>
+	<div id="three">
+		<div id="threesub">
+			<p>By default a box is sized just big enough to hold its contents. Notice how, without width properties, a div will stretch to 100% of the window.<br/>
+			Width as a percentage is based off the box that contains it. In this case, the p tag is 50% of a 75% width box, not 50% of the window width.</p>
+		</div>
+	</div>
+
+</body>
+</html>

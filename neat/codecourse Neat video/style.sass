@@ -1,0 +1,39 @@
+$visual-grid: true !default
+$visual-grid-color: lightblue !default
+$visual-grid-index: front !default
+$visual-grid-opacity: 0.4 !default
+$max-width: 960px
+$grid-columns: 14
+
+// these neat variables have to come before the @import line
+
+@import "bourbon", "neat"
+
+
+section
+	@include outer-container
+
+	aside
+		@include span-columns(3)
+		background-color: tint(red, 80%)
+
+	article
+		@include span-columns(9)
+		@include omega()
+		background-color: tint(green, 90%)
+
+	p.two
+		@include span-columns(8)
+		@include shift(3)
+		background-color: tint(purple, 75%)
+
+
+
+p.one
+	@include span-columns(6)
+	background-color: tint(yellow, 75%)
+
+p.two
+	@include span-columns(6)
+	@include shift(3)
+	background-color: tint(pink, 75%)

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>For Loops</title>
+</head> 
+<body>
+
+	<p id="arrayString"></p>
+
+	<script type="text/javascript">
+
+	var arrayString = "";
+
+	var myArray = ["pizza", "chocolate", "crisps"];
+	// console.log(myArray.length);
+
+		for (var i = 0; i < myArray.length; i++){
+
+			console.log(myArray[i]);
+
+			arrayString = arrayString + myArray[i]+" ";
+
+		};
+
+		document.getElementById("arrayString").innerHTML = arrayString;
+
+	</script>
+
+</body>
+</html>

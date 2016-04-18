@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML: margin</title>
+	<style type="text/css">
+		#one {
+			background-color: lightblue;
+			float: left;
+			margin-right: 50px;
+		}
+		#two {
+			background-color: lightgreen;
+			float: left;
+			margin-left: 50px;
+		}
+		.parent {
+			width: 100%;
+			height: 300px;
+		}
+		.centred {
+			margin: 0px auto;
+		}
+		div {
+			border: 1px solid red;
+			width: 200px;
+			height: 200px;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div id="one"><p>this is the left div</p></div>
+		<div id="two"><p>this is the right div. left and right margins dont collapse. only top and bottom.</p></div>
+	</div>
+	<div class="parent">
+		<div class="centred">This is centred div using auto for margin left and right.</div>
+	</div>
+</body>
+</html>

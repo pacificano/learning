@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Accessing Elements</title>
+</head>
+<body>
+
+	<p id="text">Some text</p>
+
+	<script type="text/javascript">
+
+	// Here is a single line comment.
+
+	alert(document.getElementById("text").innerHTML);
+
+	/* And
+	here
+	is a multiline comment.  */
+	
+	</script>
+
+	<button onclick="document.getElementById('text').innerHTML = 'Some more text'">Click me!</button>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<textarea type="text" id="message"></textarea>
+<div id="charactersLeft"></div>
+<div id="lastKey"></div>
+
+<script type="text/javascript">
+	
+	var el;
+
+	function charCount (e) {
+		
+		var textEntered, charDisplay, counter, lastKey;
+		textEntered = document.getElementById('message').value;
+		charDisplay = document.getElementById('charactersLeft');
+		counter = (180 - (textEntered.length));
+		charDisplay.textContent = counter;
+
+		lastKey = document.getElementById('lastKey');
+		lastKey.textContent = 'Last key in ASCII code: ' + e.keyCode;
+
+	}
+
+	el = document.getElementById('message');
+	el.addEventListener('keypress', charCount, false);
+
+</script>
+
+</body>
+</html>

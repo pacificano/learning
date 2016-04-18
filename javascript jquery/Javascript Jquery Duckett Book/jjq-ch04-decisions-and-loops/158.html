@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	// Comparison Operators
+
+	var pass = 50;
+	var score = 90;
+
+	var hasPassed = score >= pass;
+
+	document.write("Passed: " + hasPassed + "<br />");
+
+
+
+	// Comparing two expressions
+
+	var score1 = 90;
+	var score2 = 95;
+	var highScore1 = 75;
+	var highScore2 = 95;
+
+	var comparison = (score1 + score2) > (highScore1 + highScore2);
+
+	document.write("Highscore beaten: " + comparison + "<br />");
+
+
+
+	// Logical operators
+
+	// && and
+	// || or
+	// ! not
+
+	var andLogical = ((2 < 5) && (3 >=2));
+	document.write("&& and: " + andLogical + "<br />");
+
+	var orLogical = ((2 < 5) || (2 < 1));
+	document.write("|| or: " + orLogical + "<br />");
+
+	var notLogical = !(2 < 1);
+	document.write("! not: " + notLogical + "<br />");
+
+</script>
+
+</body>
+</html>

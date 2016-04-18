@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	var hotel = {
+
+		name: 'Park',
+		rooms: 120,
+		booked: 77.
+
+	};
+
+	hotel.gym = true;
+	hotel.pool = false;
+	delete hotel.booked;
+
+	document.write(hotel.name + '<br />');
+	document.write('Pool: ' + hotel.pool + '<br />');
+	document.write('Gym: ' + hotel.gym);
+
+</script>
+
+</body>
+</html>

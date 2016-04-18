@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+		.hot {
+			font-size: 200%;
+		}
+
+		.seasonal {
+			font-weight: bold;
+		}
+
+		.favorite {
+			background-color: red;
+		}
+
+		#group {
+			background-color: purple;
+		}
+
+		.cool {
+			font-size: 67%;
+			color: green;
+		}
+
+		.complete {
+			text-decoration: underline;
+			background-color: orange;
+		}
+
+		li {
+			background-color: pink;
+		}
+
+		#slideAd {
+			width: 130px;
+			height: 60px;
+			background-color: #403c3b;
+			background-image: url('../images/adverlion.png');
+			background-repeat: no-repeat;
+			background-position: 10px center;
+			color: #fff;
+			border-top: 1px solid #fff;
+			border-left: 1px solid #fff;
+			border-bottom: 1px solid #fff;
+			padding: 25px 20px 10px 85px;
+			position: fixed;
+			bottom: 20px;
+			right: -235px;
+			text-transform: uppercase;
+		}
+
+	</style>
+
+</head>
+<body>
+
+<h2>HERE IS MY HEADING</h2>
+
+<div id="page">
+	
+	<ul>
+		<ul>
+        <li id="one" class="hot"><em>fresh</em> figs</li>
+        <li id="two" class="hot">pine nuts</li>
+        <li id="three" class="hot">honey</li>
+        <li id="four">balsamic vinegar</li>
+        <li>linguine</li>
+        <li>cream</li>
+        <li>coconut milk</li>
+        <li>mushrooms</li>
+        <li>apples</li> 
+        <li>strawberries</li>
+        <li>rice crackers</li>
+        <li>brie</li>
+        <li>rice</li>
+        <li>green tea</li>
+        <li>vine-ripened tomatoes</li>
+        <li>bananas</li>
+        <li>red kidney beans</li>
+        <li>haricot beans</li>
+        <li>lettuce</li>
+        <li>organic brown rice vinegar</li>
+        <li>sushi nori</li>
+        <li>garlic</li>
+        <li>ginger</li>
+        <li>red onions</li>
+        <li>goat's cheese</li>
+        <li>baby leaf spinach</li>
+        <li>coconut</li>
+        <li>avocado</li>
+        <li>leeks</li>
+        <li>carrots</li>
+        <li>pears</li>
+        <li>apples</li>
+        <li>organic free-range eggs</li>
+        <li>cashew nut butter</li>
+        <li>lemons</li>
+        <li>coconut oil</li>
+        <li>sourdough bread</li>
+        <li>almond milk</li>
+        <li>kale</li>
+        <li><em>gluten-free</em> soy sauce</li>
+        <li>quinoa</li>
+	</ul>
+
+	<p id="footer">Here is the quote that will end up on top of h2</p>
+
+	<div id="slideAd">
+		Buy ListKing Pro for only $1.99
+	</div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(function () {
+		
+		var $window = $(window);
+		var $slideAd = $('#slideAd');
+		var endZone = $('#footer').offset().top - $window.height() - 500;
+
+		$window.on('scroll', function () {
+			
+			if ( (endZone) < $window.scrollTop() ) {
+
+				$slideAd.animate({'right': '0px'}, 250);
+
+			} else {
+
+				$slideAd.stop(true).animate({'right': '-360px'}, 250);
+			};
+
+		});
+
+	});
+
+</script>
+
+</body>
+</html>

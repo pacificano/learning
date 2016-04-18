@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML: display</title>
+	<style type="text/css">
+		#noDisplay p {
+			background-color: lightblue;
+		}
+		#noDisplay strong {
+			background-color: red;
+		}
+
+		#displayDiv p {
+			background-color: lightgreen;
+		}
+		#displayDiv strong {
+			background-color: red;
+			display: block;
+		}
+
+		#blockDiv {
+			background-color: pink;
+		}
+
+		#inlineDiv {
+			background-color: grey;
+		}
+		#inlineDiv p {
+			display: inline;
+		}
+
+		p.one {
+			background-color: yellow;
+		}
+		p.two {
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+
+<div id="noDisplay"><p>all this text is inline. the p tag is inline. the strong tag is inline. all this text is inline. the p tag is inline. the strong tag is inline. all this text is inline. the p tag is inline. the strong tag is inline. <strong>this text is strong, isn't it?</strong> all this text is inline. the p tag is inline. the strong tag is inline. all this text is inline. the p tag is inline. the strong tag is inline. all this text is inline. the p tag is inline. the strong tag is inline. all this text is inline. the p tag is inline. the strong tag is inline.</p></div>
+
+<div id="displayDiv"><p>all this text is inline. the p tag is inline. the strong tag is block. all this text is inline. the p tag is inline. the strong tag is block. all this text is inline. the p tag is inline. the strong tag is block. <strong>this text is strong, isn't it? but this is display block. and see how it has its own line now?</strong> all this text is inline. the p tag is inline. the strong tag is block. all this text is inline. the p tag is inline. the strong tag is block. all this text is inline. the p tag is inline. the strong tag is block. all this text is inline. the p tag is inline. the strong tag is block.</p></div>
+
+<div id="blockDiv">
+	<p class="one">all this text is inline. the p tag is inline. the strong tag is inline. all this text is inline. the p tag is inline. the strong tag is inline. all this text is inline. the p tag is inline. the strong tag is inline. all this text is inline. the p tag is inline. the strong tag is inline. all this text is inline. the p tag is inline. the strong tag is inline.</p>
+	<p class="two">paragraphs are blocks and start on their own lines.</p>
+</div>
+
+<div id="inlineDiv">
+	<p class="one">all this text is inline. the p tag is inline. the strong tag is inline. all this text is inline. the p tag is inline. the strong tag is inline. all this text is inline. the p tag is inline. the strong tag is inline. all this text is inline. the p tag is inline. the strong tag is inline. all this text is inline. the p tag is inline. the strong tag is inline.</p>
+	<p class="two">paragraphs are blocks and start on their own lines.</p>
+</div>
+
+</body>
+</html>

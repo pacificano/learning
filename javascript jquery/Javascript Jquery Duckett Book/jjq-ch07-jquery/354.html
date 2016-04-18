@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+		.hot {
+			font-size: 200%;
+		}
+
+		.seasonal {
+			font-weight: bold;
+		}
+
+		.favorite {
+			background-color: red;
+		}
+
+		#group {
+			background-color: purple;
+		}
+
+		.cool {
+			font-size: 67%;
+			color: green;
+		}
+
+		.complete {
+			text-decoration: underline;
+			background-color: orange;
+		}
+
+		li {
+			background-color: pink;
+		}
+
+	</style>
+
+</head>
+<body>
+
+<h2>HERE IS MY HEADING</h2>
+
+<ul>
+	<li id="zero"><em>figs</em></li>
+	<li id="one" class="hot">pinenuts</li>
+	<li id="two" class="hot"><span style="color: blue;">honey</span></li>
+	<li id="three" class="hot">vinegar</li>
+</ul>
+
+<div id="newItemButton">
+	<button href="#" id="showForm">new item</button>
+</div>
+
+<form id="newItemForm">
+	<input type="text" id="itemDescription" placeholder="Add description..." />
+	<input type="submit" id="addButton" value="add" />
+</form>
+
+<p id="notes">Here is the quote that will end up on top of h2</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(function () {
+		
+		var $p = $('p');
+		var $clonedQuote = $p.clone();
+		$p.remove();
+		$clonedQuote.insertAfter('h2');
+
+		var $moveItem = $('#one').detach();
+		$moveItem.appendTo('ul');
+
+	});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML: border images</title>
+	<style type="text/css">
+		p {
+			border-width: 10px;
+			background-color: pink;
+		}
+		.one {
+			height: 200px;
+			width: 200px;
+			-moz-box-shadow: -5px -5px #777777;
+			-webkit-box-shadow: -5px -5px #777777;
+			box-shadow: -5px -5px #777777;
+		}
+		.two {
+			height: 200px;
+			width: 200px;
+			-moz-box-shadow: 5px 5px 5px #777777;
+			-webkit-box-shadow: 5px 5px 5px #777777;
+			box-shadow: 5px 5px 5px #777777;
+		}
+		.three {
+			height: 200px;
+			width: 200px;
+			-moz-box-shadow: 5px 5px 5px 5px #777777;
+			-webkit-box-shadow: 5px 5px 5px 5px #777777;
+			box-shadow: 5px 5px 5px 5px #777777;
+		}
+		.rounded {
+			-moz-border-radius: 50px;
+			-webkit-border-radius: 50px;
+			border-radius: 50px;
+		}
+		.elliptical {
+			-moz-border-radius: 100px 250px;
+			-webkit-border-radius: 100px 250px;
+			border-radius: 100px 250px;
+		}
+		.random {
+			-moz-border-radius: 50px 100px 150px 200px / 25px 60px 310px 250px;
+			-webkit-border-radius: 50px 100px 150px 200px / 25px 60px 310px 250px;
+			border-radius: 50px 100px 150px 200px / 25px 60px 310px 250px;
+			overflow: hidden;
+		}
+		.hidden {
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+
+<p class="one random">how does text work in these boxes? is it just a pure square? a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a </p>
+<p class="two elliptical">only when overflow is hidden. only when overflow is hidden. only when overflow is hidden. only when overflow is hidden. only when overflow is hidden. only when overflow is hidden. only when overflow is hidden. only when overflow is hidden. only when overflow is hidden. only when overflow is hidden. </p>
+<p class="two elliptical hidden">only when overflow is hidden. only when overflow is hidden. only when overflow is hidden. only when overflow is hidden. only when overflow is hidden. only when overflow is hidden. only when overflow is hidden. only when overflow is hidden. only when overflow is hidden. only when overflow is hidden. </p>
+<p class="three rounded"></p>
+</body>
+</html>

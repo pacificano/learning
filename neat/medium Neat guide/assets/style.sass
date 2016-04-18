@@ -1,0 +1,72 @@
+// Change the grid settings... has to go above the bourbon import
+$visual-grid: false !default
+$visual-grid-color: lightblue !default
+$visual-grid-index: front !default
+$visual-grid-opacity: 0.2 !default
+
+$column: 90px
+$gutter: 30px
+$grid-columns: 12
+$max-width: 960px
+
+
+
+@import "bourbon"
+@import "neat-helpers"
+
+// Define your breakpoints... has to go after neat-helpers but before neat
+$tablet: new-breakpoint(max-width 800px 8)
+$mobile: new-breakpoint(max-width 400px 4)
+
+@import "neat"
+
+
+
+
+
+
+
+
+
+
+#divContainer
+	+outer-container
+
+	div
+		border: 1px solid red
+		+span-columns(3)
+		+media($tablet)
+			+span-columns(4)
+		+media($mobile)
+			+span-columns(4)
+
+
+
+#colourTest
+	+outer-container
+
+	div
+		border: 1px solid green
+		+span-columns(3)
+
+	& > div:nth-child(3)
+		background-color: pink
+
+		& > div
+			+span-columns(2 of 4)
+
+		& > div:nth-child(1)
+			background-color: green
+
+		& > div:nth-child(2)
+			background-color: yellow
+
+	& > div:nth-child(4)
+		background-color: yellow
+
+		& > div:nth-child(1)
+			+span-columns(1 of 3)
+
+		& > div:nth-child(2)
+			+span-columns(1 of 3)
+			+shift(1)

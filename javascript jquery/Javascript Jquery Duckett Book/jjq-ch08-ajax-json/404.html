@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		.UK {
+			background-color: blue;
+			color: white;
+		}
+		.US {
+			background-color: red;
+			color: blue;
+		}
+		.AU {
+			background-color: green;
+			color: yellow;
+		}
+
+		#rates {
+			background-color: pink;
+		}
+		#reload {
+			background-color: purple;
+		}
+	</style>
+
+</head>
+<body>
+
+<div id="exchangerates">hello</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$('#exchangerates').append('<div id="rates"></div><div id="reload"></div>');
+
+	function loadRates () {
+		$.getJSON('data/rates.json')
+			.done(function (data) {
+				var d = new Date();
+				var hrs = d.getHours();
+				var mins = d.getMinutes();
+				var msg = '<h2>Exchange Rates</h2>';
+				$.each(data, function (key, val) {
+					msg += '<div class="' + key + '">' + key + ': ' + val + '</div>';
+				}); // end .each
+				msg += '<br>Last update: ' + hrs + ':' + mins + '<br>';
+				$('#rates').html(msg);
+			}) // end .done
+			.fail(function () {
+				$('aside').append('Sorry, we cannot load rates.');
+			}) // end .fail
+			.always(function () {
+				var reload = '<a id="refresh" href="#">';
+				reload += '<img src="img/refresh.png" alt="refresh" /></a>';
+				$('#reload').html(reload);
+				$('#refresh').on('click', function (e) {
+					e.preventDefault();
+					loadRates();
+				}); // end onClick
+			}); // end .always
+	}; // end loadRates
+
+	loadRates();
+</script>
+
+</body>
+</html>

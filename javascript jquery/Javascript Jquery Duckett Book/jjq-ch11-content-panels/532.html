@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<style type="text/css">
+		.accordion, .menu {
+		background-color: #f2f2f2;
+		color: #666;
+		margin: 0;
+		padding: 0;
+		overflow: auto;}
+
+		.accordion li {
+		padding: 0;
+		list-style-type: none;}
+
+		.accordion-control {
+		background-color: #303030;
+		color: #fff;
+		display: block;
+		width: 100%;
+		padding: 0.5em 0.5em 0.5em 0.7em;
+		margin: 0;
+		border-top: 1px solid #666;}
+
+		.accordion-panel {
+		display: none;}
+
+		.accordion-panel p {
+		margin: 20px;}
+
+		.accordion-panel img {
+		display: block;
+		clear: left;}
+	</style>
+
+</head>
+<body>
+
+<ul class="menu">
+	<li>
+		<a href="#" class="accordion-control"><h3>Classics</h3></a>
+		<div class="accordion-panel">If you like your flavors traditional...</div>
+	</li>
+	<li>
+		<a href="#" class="accordion-control"><h3>The Flower Series</h3></a>
+		<div class="accordion-panel">Take your tastebuds for a gentle...</div>
+	</li>
+	<li>
+		<a href="#" class="accordion-control"><h3>Salt o' the Sea</h3></a>
+		<div class="accordion-panel">Ahoy! If you long for a taste of...</div>
+	</li>
+
+</ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="532.js"></script>
+
+<script type="text/javascript">
+	$('.menu').accordion(500);
+</script>
+
+</body>
+</html>

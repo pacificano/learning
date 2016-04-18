@@ -1,0 +1,12 @@
+footer
+
+	.lockup
+		.logo {% include icons/logo.html %}
+
+		.content-wrap
+			
+			nav {% for item in site.data.portfolio.menu %}
+				a(href="{{ item.url }}") {{ item.name}}
+				{% endfor %}
+
+			p.copyright All content copyright 2016

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Color</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	function getRandomColor() {
+
+			// splits up the string into an array
+			var letters = "0123456789ABCDEF".split("");
+
+			var color = "#";
+
+			// runs the loop 6 times
+			for (var i = 0; i < 6; i++) {
+
+				// randomly picks one of the 16 options in the letters array and adds it to color
+				color += letters[Math.round(Math.random() * 15)];
+			};
+
+		alert(color);
+	}
+
+	getRandomColor();
+
+</script>
+
+</body>
+</html>

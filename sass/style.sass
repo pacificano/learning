@@ -1,0 +1,54 @@
+@import "Bourbon"
+@import "neat"
+@import font
+@import warning
+
+$primary-color: #eb1a79
+$decoration: underline
+
+
+
+h1
+	color: $primary-color
+	text-decoration: $decoration
+
+	a
+		background-color: red
+		+font-sizerz(200%)
+
+
+
+p
+	color: $text-color
+	font-family: $helvetica
+
+	.absoLo
+		@include position(absolute, 50px null null 200px)
+
+
+
+ul
+	width: 200px * 2 - 50px
+
+
+
+.prefixerTest
+	background-color: $primary-color
+	+size(601px 400px)
+	border-radius: 20px
+	display: flex
+	justify-content: center
+	align-items: center
+
+
+
+.boxes
+	+clearfix
+	+outer-container
+
+.box
+	background-color: tint(blue, 40%)
+	margin: 0px
+	+size(100px)
+	float: left
+	+span-columns(3)

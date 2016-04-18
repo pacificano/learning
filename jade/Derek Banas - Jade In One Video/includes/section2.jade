@@ -1,0 +1,40 @@
+div
+	h1 Javascript in Jade
+
+	- myName = "Jeff"
+	p Hello #{myName}
+	p 23 * 3 = #{23 * 3}
+
+
+
+	- website = "http://www.pacificano.com"
+	a(href="#{website}") Pacificano
+
+
+
+	- heroes = ['batman', 'superman', 'thor']
+
+	ul
+		li: a(href="#"): span #{heroes[0]}
+		li: a(href="#"): span #{heroes[1]}
+		li: a(href="#"): span #{heroes[2]}
+
+
+
+	- hipsterLorem = "Williamsburg pitchfork helvetica ethical, yuccie celiac mixtape bitters. Pinterest trust fund pour-over neutra ethical tousled. Tote bag ethical dreamcatcher, viral tofu locavore jean shorts aesthetic."
+
+	p= hipsterLorem
+
+
+
+	-fnI = {"type": "text", "name": "fName"}
+
+	span First Name
+	input(type=fnI.type, name=fnI.name)
+
+
+
+	- someInfo = "<i>Very Interesting</i>"
+
+	p= someInfo
+	p!= someInfo

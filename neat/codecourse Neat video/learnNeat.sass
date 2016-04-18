@@ -1,0 +1,27 @@
+$visual-grid: true !default
+$visual-grid-color: lightblue !default
+$visual-grid-index: front !default
+$visual-grid-opacity: 0.2 !default
+
+@import "bourbon"
+@import "grid-settings"
+@import "neat"
+@import "bower_components/normalize-css/normalize.css"
+
+section
+	+outer-container
+	background-color: tint(red, 50%)
+
+div.container
+	+outer-container
+	background-color: tint(blue, 50%)
+
+div.parent-element
+	// @include span-columns(10)
+	background-color: tint(yellow, 50%)
+
+div.element
+	@include media($mobile)
+		@include span-columns(75 of 100)
+	@include span-columns(50 of 100)
+	background-color: tint(green, 50%)

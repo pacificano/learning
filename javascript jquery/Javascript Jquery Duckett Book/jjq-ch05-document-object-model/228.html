@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+		.complete {
+			background-color: yellow;
+		}
+
+		.cool {
+			background-color: lightblue;
+		}
+
+	</style>
+
+</head>
+<body>
+
+<p>em is hidden. textContent can still see it. but innerText can not.</p>
+
+<p id="scriptResults"></p>
+
+	<ul
+		><li id="one" class="hot"><em>fresh</em> figs</li
+		><li id="two" class="hot">pine nuts</li
+		><li id="three" class="hot">honey</li
+		><li id="four">balsamic vinegar</li
+	></ul>
+
+	<script type="text/javascript">
+
+		var firstItem = document.getElementById('one');
+		var itemContent = firstItem.innerHTML;
+		firstItem.innerHTML = '<a href=\"http://example.org\">' + itemContent + '</a>';
+
+	</script>
+
+</body>
+</html>

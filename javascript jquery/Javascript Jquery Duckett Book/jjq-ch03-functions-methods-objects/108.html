@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	// Literal notation
+
+	var hotel = {
+
+		name: 'Quay',
+		rooms: 40,
+		booked: 25,
+		gym: true,
+		roomTypes: ['twin', 'double', 'suite'],
+		checkAvailability: function() {
+			return this.rooms - this.booked;
+		}
+
+	};
+
+	var roomsFree = hotel.checkAvailability();
+
+	document.write(roomsFree);
+
+	hotel.rooms = 30;
+
+	document.write(hotel.checkAvailability());
+
+	hotel.roomTypes[2] = 'triples';
+
+	document.write(hotel.roomTypes[2]);
+
+	document.write(hotel['name'] + 'has a ' + hotel['gym']);
+
+	document.write('<br /><br />');
+
+
+
+	// Constructor Notation
+
+	var motel = new Object();
+
+	motel.name = 'Two Trees';
+	motel.rooms = 400;
+	motel.booked = 25;
+
+	motel.checkAvailability = function() {
+		return this.rooms - this.booked;
+	};
+
+	document.write(motel.checkAvailability());
+
+	delete motel.name;
+
+	document.write(motel['name']);
+
+
+
+	// Creating many objects
+
+	function cafeList (name, rooms, booked) {
+		
+		this.name = name;
+		this.rooms = rooms;
+		this.booked = booked;
+
+		this.checkAvailability = function () {
+			return this.rooms - this.booked;
+		};
+
+	};
+
+	var chickenCafe = new cafeList('Chicken', 40, 38);
+	var catCafe = new cafeList('Cat', 905, 102);
+
+	document.write(chickenCafe.name);
+	document.write(catCafe.checkAvailability());
+
+	document.write('<br /><br />');
+
+	var catCafeDetails = catCafe.name + ' rooms available: ';
+	catCafeDetails += catCafe.checkAvailability();
+
+	document.write(catCafeDetails);
+
+</script>
+</body>
+</html>

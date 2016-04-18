@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+	// sorting strings
+	var names = ['Alice', 'Ann', 'Andrew', 'Abe'];
+	names.sort();
+	console.log(names);
+
+	var namesTwo = ['Tristan', 'Julia', 'Rocky', 'Sophie', 'Michael'];
+	namesTwo.sort();
+	console.log(namesTwo);
+	
+	// ascending order sort
+	var prices = [1, 2, 125, 19, 14];
+	console.log(prices);
+
+	prices.sort(function (a, b) {
+		return a - b;
+	});
+	console.log(prices);
+
+	// descending order sort
+	prices.sort(function (a, b) {
+		return b - a;
+	});
+	console.log(prices);
+
+	// random sort
+	prices.sort(function () {
+		return 0.5 - Math.random();
+	});
+	console.log(prices);
+
+	// sorting dates
+	var holidays = [
+		'2014-12-25',
+		'2014-01-01',
+		'2014-07-04',
+		'2014-11-28'
+	];
+	console.log(holidays);
+
+	holidays.sort(function (a, b) {
+		var dateA = new Date(a);
+		var dateB = new Date(b);
+		return dateA - dateB;
+	});
+	console.log(holidays);
+
+
+</script>
+</body>
+</html>

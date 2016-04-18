@@ -1,0 +1,97 @@
+Who is the site for?
+
+- design for target audience. not site owner.
+
+- target audience: individuals
+	- what age?
+	- men or women or both?
+	- what country?
+	- urban or rural?
+	- average income?
+	- education level?
+	- married? single?
+	- family? kids?
+	- occupation?
+	- how long is work week?
+	- hours spent on the web?
+	- what websites do they visit?
+	- what device do they use to access web?
+
+- target audience: companies
+	- size of company?
+	- position of people in company who visit site?
+	- using site for themselves or someone else?
+	- budget size?
+
+
+
+Invent fictional visitors from target audience (personas).
+Make design decisions based on them.
+
+
+
+Why people visit the site?
+
+- motivations
+	- general entertainment or specific goal?
+	- personal or professional goal?
+	- essential or luxury?
+
+- goals
+	- general information (eg. company background) or specific information (eg. particular product information)?
+	- familiar with service/product or need to be introduced?
+	- time sensitive? (latest news/updates?)
+	- information used for buying decision?
+	- do they need contact details? (in person? hours/map. online? email/telephone)
+
+
+
+Create a list of reasons why people would be coming to your site.
+Assign them to fictional visitors (personas).
+
+
+
+What information your visitors need to achieve their goals (quickly and effectively)?
+
+- look at reasons, determine what they need.
+- prioritize levels of information (key points -> non-essential)
+- key information
+	- are visitors familiar with your subject area/brand?
+	- do you need to introduce yourself?
+	- are they familiar with the product/service/information you are covering?
+	- do they need background information?
+	- what are the most important features you are offering?
+	- what differentiates you from others?
+	- once visitors achieve their goals, are their common questions they might ask?
+
+
+
+How often will people visit your site?
+
+- can be helpful to set schedule for when site will be updated
+- some parts of a site will benefit from being updated more frequently
+	- goods/services
+		- how often do people return to purchase from you
+		- how often is stock updated or service changed
+	- information
+		- how often is subject updated
+		- what % of visitors would return for regular updates compared to those who only need information once
+
+
+
+Site maps
+
+- organise the site information into sections or pages
+ - card sorting
+	- place each piece of information onto card
+	- sort into groups
+	- each group = page
+	- make diagram of pages = structure of site = site map
+	- remember to focus on visitor goals
+
+
+
+Wireframes
+
+- sketch of key information for each page
+- create visual heirachy

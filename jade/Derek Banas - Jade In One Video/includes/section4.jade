@@ -1,0 +1,65 @@
+div
+	h4 Looping
+
+	- qbs = ['Palmer', 'Brees', 'Rivers', 'Brady']
+
+	ul
+		- for (i = 0; i < qbs.length; i++){
+			li= qbs[i]
+		- }
+
+	ul
+		each qb in qbs
+			li= qb
+
+	- i = 0
+
+	ul
+		while i <= 20
+			li= i
+			- i++;
+
+
+
+div
+	h4 Mixins
+
+	mixin nflPlayer(name, pos, team)
+		li #{name} is the #{pos} for the #{team}
+
+	ul#nflPlayers
+		+nflPlayer("Tom Brady", "Quaterback", "Patrios")
+		+nflPlayer("Payton Manning", "Quaterback", "Broncos")
+
+
+
+	mixin copyr
+		| &#169;
+
+	p
+		+copyr
+		|  2016
+
+
+
+	mixin makeList()
+		ul
+			- args = Array.prototype.slice.call(arguments);
+			for item in args
+				li= item
+
+	+makeList("Dog", "Cat", "Fish")
+
+
+	extends extendex
+	block header
+		h3 The Title
+	block content
+		p
+			| Lipsum
+	block append content2
+		p
+			| Appended Data
+	block prepend content3
+		p
+			| I come First

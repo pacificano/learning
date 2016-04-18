@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<form id="messageForm" action="http://example.org/">
+
+	<textarea id="message"></textarea>
+	<input type="submit" value="next">
+
+</form>
+
+<script type="text/javascript">
+	
+	function setup () {
+		
+		var textInput;
+		textInput = document.getElementById('message');
+		textInput.focus();
+
+	}
+
+	window.addEventListener('DOMContentLoaded', setup, false);
+
+	window.addEventListener('beforeunload', function(event) {
+		
+		var message = 'You have changes that have not been saved...';
+		(event || window.event).returnValue = message;
+		return message;
+	});
+
+
+
+</script>
+</body>
+</html>

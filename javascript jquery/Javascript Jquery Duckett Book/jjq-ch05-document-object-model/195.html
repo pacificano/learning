@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+		#parentDiv {
+			background-color: pink;
+		}
+
+		.leadText {
+			font-size: 200%;
+		}
+
+		.secondText {
+			font-size: 67%;
+		}
+
+		img {
+			width: 30%;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="parentDiv">
+
+		<div id="textDiv">
+
+			<p class="leadText" id="leadText">Hello.</p>
+			<p class="secondText">Goodbye.</p>
+		
+		</div>
+
+		<div id="imageDiv">
+			
+			<img src="splash-palmTrees.JPG"><br />
+			<img src="splash-pinkFlowers.JPG">
+
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+
+	// Individual elements
+		// getElementById()
+		// querySelector()
+
+	// Multiple elements
+		// getElementsByClassName()
+		// getElementsByTagName()
+		// querySelectorAll()
+
+	// Moving between element nodes
+		// parentNode
+		// previousSibling / nextSibling
+		// firstChild / lastChild
+
+	var el = document.getElementById('textDiv').textContent;
+	document.write(el);
+
+	</script>
+
+</body>
+</html>

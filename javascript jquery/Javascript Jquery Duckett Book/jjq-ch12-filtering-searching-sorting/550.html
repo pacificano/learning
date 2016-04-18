@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="noUiSlider/nouislider.min.css">
+	<style type="text/css">
+		.container {
+			width: 50%;
+			margin-left: 25%;
+			margin-right: 25%;
+		}
+	</style>
+</head>
+<body>
+
+<div class="container">
+<div id="slider"></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="noUiSlider/nouislider.min.js"></script>
+<script type="text/javascript">
+	var slider = document.getElementById('slider');
+
+	noUiSlider.create(slider, {
+		start: [20, 80],
+		connect: true,
+		range: {
+			'min': 0,
+			'max': 100
+		}
+	});
+</script>
+</body>
+</html>

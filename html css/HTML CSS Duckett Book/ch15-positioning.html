@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML: positioning</title>
+	<style type="text/css">
+		.one {
+			background-color: pink;
+			height: 300px;
+			width: 600px;
+		}
+		.two {
+			background-color: blue;
+			height: 300px;
+			width: 600px;
+		}
+		.three {
+			background-color: yellow;
+			height: 100px;
+			width: 250px;
+		}
+		p {
+			background-color: red;
+		}
+		.relative {
+			position: relative;
+		}
+		.absolutely {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		.fixed {
+			position: fixed;
+			top: 0;
+			right: 0;
+		}
+		.floated {
+			float: right;
+		}
+		.movedRelative {
+			top: -30px;
+			left: 100px;
+		}
+		body, p {
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+
+<div class="one">
+	<p class="absolutely">Pink div. positioned absolutely without the parent div having relative position means it goes out of the flow.</p>
+</div>
+
+<div class="two relative">
+	<p>Blue div.</p>
+	<div class="three absolutely">absolutely. you have to put a relative position on the containing div though.</div>
+	<p class="floated">Floated text. This element becomes a block.</p>
+</div>
+
+<div class="one relative">
+	<p>Blue div.</p>
+	<div class="three fixed">this is a fixed div in a relatively positioned div.</div>
+	<p class="floated">Floated text. This element becomes a block.</p>
+</div>
+
+<div class="two relative">
+	<p>Blue div.</p>
+	<div class="three">absolutely. you have to put a relative position on the containing div though.</div>
+	<p>Floated text. This element becomes a block.</p>
+</div>
+
+<div class="one relative">
+	<p>Blue div.</p>
+	<div class="three relative movedRelative">moving relative keeps the place where it was in the flow..</div>
+	<p class="floated">Floated text. This element becomes a block.</p>
+</div>
+
+</body>
+</html>

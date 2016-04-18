@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	function getSize (width, height, depth) {
+		
+		var area = width * height;
+		var volume = width * height * depth;
+		var sizes = [area, volume];
+		
+		return sizes;
+
+	}
+
+	var areaOne = getSize(3, 2, 3)[0];
+	var volumeOne = getSize(3, 2, 3)[1];
+	/* 
+		passes the parameters to the selected part of the sizes array
+
+		areaOne is getting passed to sizes[area] where area is width * height
+		
+		volumeOne is getting passed to sizes[volume] where volume is width * height * depth
+	*/
+
+	document.write('areaOne = ' + areaOne);
+	document.write('<br />');
+	document.write('volumeOne = ' + volumeOne);
+
+</script>
+</body>
+</html>

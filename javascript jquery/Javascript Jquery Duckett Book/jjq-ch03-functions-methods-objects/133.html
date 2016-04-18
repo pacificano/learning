@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document Object Model</title>
+
+	<style type="text/css">
+
+		.blueText {
+			color: blue;
+		}
+
+	</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	console.log(document.title);
+	console.log(document.lastModified);
+	console.log(document.URL);
+	console.log(document.domain);
+
+	document.write('<div id="footer" class="blueText">hello buddy</div>');
+
+	var el = document.getElementById('footer');
+	el.innerHTML = 'Goodbye buddy';
+
+	var qSelect = document.querySelectorAll('.blueText');
+	console.log(qSelect);
+
+	// document.createElement();
+	// document.createTextNode();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		.current {
+			background-color: blue;
+			color: white;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+
+<nav>
+	<a href="data/jq-load1.html" class="current">World</a>
+	<a href="data/jq-load2.html">Dog</a>
+	<a href="data/jq-load3.html">Cat</a>
+</nav>
+
+<section id="content">
+	<div id="container">
+		loaded page 1
+	</div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$('nav a').on('click', function (e) {
+		e.preventDefault();
+		var url = this.href;
+
+		$('nav a.current').removeClass('current');
+		$(this).addClass('current');
+
+		$('#container').remove();
+		$('#content').load(url + ' #content').hide().fadeIn('slow');
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regular Expressions</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+
+	<style type="text/css">
+
+		#circle {
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			border-radius: 100px;
+		}
+
+		.square {
+			width: 300px;
+			height: 300px;
+			background-color: red;
+			margin-top: 10px;
+		}
+
+	</style>	
+
+</head>
+<body>
+
+	<button id="regexGreat">Great!</button>
+	<button id="regexHard">Hard!</button>
+	<button id="regexInsensitive">Insensitive!</button>
+	<button id="regexG">The letter G!</button>
+
+	<script type="text/javascript">
+		
+		var regex = /great/;
+
+		var stringOne = "Regex is great!";
+
+		var stringTwo = "Regex is hard!";
+
+		var resultOne = stringOne.match(regex);
+
+		var resultTwo = stringTwo.match(regex);
+
+		$("#regexGreat").click(function() {
+			
+			alert(resultOne);
+		});
+
+		$("#regexHard").click(function() {
+
+			alert(resultTwo);
+
+		});
+
+		$("#regexInsensitive").click(function() {
+
+			// i is a flag for insensitive case. Great is capitalised
+
+			var regexIString = /Great/i;
+			var iStringResult = stringOne.match(regexIString);
+
+			alert(iStringResult);
+			
+		})
+
+		$("#regexG").click(function() {
+			
+			// g is a flag for global
+
+			var regexGString = /e/g;
+			var stringForG = "Holy shit I love Regex";
+			var gStringResult = stringForG.match(regexGString);
+
+			alert(gStringResult);
+		})
+
+	</script>
+
+
+
+</body>
+</html>

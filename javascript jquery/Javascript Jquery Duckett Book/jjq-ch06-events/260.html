@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<input type="text" id="username">
+<div id="feedback"></div>
+
+<script type="text/javascript">
+	
+	function checkUsername () {
+		
+		var elMsg = document.getElementById('feedback');
+		
+		if (this.value.length < 5) {
+			
+			elMsg.textContent = 'Username must be 5 characters or more';
+
+		} else {
+
+			elMsg.textContent = '';
+
+		};
+
+	}
+
+	var elUsername = document.getElementById('username');
+	elUsername.onblur = checkUsername;
+
+</script>
+
+</body>
+</html>

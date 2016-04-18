@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Changing Styles</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<style type="text/css">
+
+		#circle {
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			border-radius: 100px;
+		}
+
+		.square {
+			width: 300px;
+			height: 300px;
+			background-color: red;
+			margin-top: 10px;
+		}
+
+	</style>	
+
+</head>
+<body>
+
+	<div id="circle"></div>
+
+	<div class="square"></div>
+
+	<div class="square"></div>
+
+
+
+	<script type="text/javascript">
+		
+		$("div").click(function() {
+			
+			$(this).css("backgroundColor", "blue");
+
+		});
+
+		$(".square").click(function() {
+			
+			$(this).fadeOut(2000);
+		})
+
+		$("#circle").click(function() {
+			
+			$("div").fadeIn(2000);
+
+		})
+
+	</script>
+
+
+
+</body>
+</html>

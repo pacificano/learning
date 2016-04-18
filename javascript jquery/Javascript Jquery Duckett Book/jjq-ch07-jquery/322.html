@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+		.hot {
+			font-size: 200%;
+		}
+
+		.seasonal {
+			font-weight: bold;
+		}
+
+		.favorite {
+			background-color: red;
+		}
+	</style>
+
+</head>
+<body>
+
+<ul>
+	<li id="zero"><em>figs</em></li>
+	<li id="one" class="hot">pinenuts</li>
+	<li id="two" class="hot">honey</li>
+	<li id="three" class="hot">vinegar</li>
+</ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+	
+	var $listHTML = $('ul').html(); // better to make selection a variable so jquery doesnt have to compute the selection each time
+	$('ul').append($listHTML);
+
+	var $listText = $('ul').text();
+	$('ul').append('<p>' + $listText + '</p>');
+
+	var $listItemHTML = $('li').html(); // .html() only grabs the first of the li's
+	$('li').append('<i>' + $listItemHTML + '</i>');
+
+	var $listItemText = $('li').text(); // uses all li's values
+	$('li').append('<i>' + $listItemText + '</i>');
+
+</script>
+
+</body>
+</html>

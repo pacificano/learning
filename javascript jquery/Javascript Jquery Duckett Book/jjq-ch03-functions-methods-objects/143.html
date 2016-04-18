@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	var today = new Date();
+	console.log(today);
+
+	var dob = new Date(1991, 3, 30);
+	console.log(dob);
+
+	console.log('The date is: ' + today.getDate());
+	console.log('The day is: ' + today.getDay());
+	console.log('The year is: ' + today.getFullYear());
+	console.log('The hour is: ' + today.getHours());
+	console.log('The millisecond is: ' + today.getMilliseconds());
+	console.log('The minute is: ' + today.getMinutes());
+	console.log('The month is: ' + today.getMonth());
+	console.log('The second is: ' + today.getSeconds());
+	console.log('The time is: ' + today.getTime());
+	console.log('The timezone is: ' + today.getTimezoneOffset());
+	console.log('The date is: ' + today.toDateString());
+	console.log('The time is: ' + today.toTimeString());
+	console.log('The time is: ' + today.toString());
+
+	var difference = today.getTime() - dob.getTime();
+	difference = (difference / 31556900000);
+	console.log((Math.floor(difference)) + ' years difference between ' + dob.getFullYear() + ' and ' + today.getFullYear() + '.');
+
+</script>
+</body>
+</html>

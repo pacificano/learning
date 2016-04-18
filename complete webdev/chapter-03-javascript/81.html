@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Disappearing Circles</title>
+
+	<style type="text/css">
+
+	#circle {
+		width: 200px;
+		height: 200px; 
+		border-radius: 100px;
+		background-color: red;
+	}
+
+	</style>
+
+</head>
+<body>
+
+	<div id="circle"></div>
+
+	<button id="circleDelete">Delete the circle</button>
+
+	<script type="text/javascript">
+
+	document.getElementById("circleDelete").onclick = function(){
+
+		document.getElementById("circle").style.display = "none";
+
+	}
+
+	</script>
+
+</body>
+</html>

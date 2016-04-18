@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>Elderflower</h1>
+
+	<div class="content">
+		
+		<div id="title">
+			
+			Special Offers
+
+		</div>
+
+		<div id="note">
+			
+			Sign-up to receive personalized offers!
+
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+
+		var title;
+		var message;
+		title = "Molly's Special Offers";
+		message = '<a href=\"sale.html\">25% off!</a>';
+		// both methods above work for mixing up quote types
+
+		var elTitle = document.getElementById('title');
+		elTitle.innerHTML = title;
+		var elNote = document.getElementById('note');
+		elNote.innerHTML = message;
+
+	</script>
+
+</body>
+</html>

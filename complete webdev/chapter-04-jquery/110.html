@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Detecting a click</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<style type="text/css">
+
+		#circle {
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			border-radius: 100px;
+		}
+
+		.square {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			margin-top: 10px;
+		}
+
+	</style>	
+
+</head>
+<body>
+
+	<div id="circle"></div>
+
+	<p>This is some text</p>
+
+	<div class="square"></div>
+
+	<p>This is some text</p>
+
+	<iframe src="http://www.bbc.com"></iframe>
+
+
+
+	<script type="text/javascript">
+		
+		$("#circle").click(function() {
+
+			alert($("p").html());
+
+			$("p").html("The text has been changed!");
+
+		});
+
+		$(".square").hover(function() {
+			
+			$("p").html("This is some text");
+
+		});
+
+		$("iframe").attr("src", "http://www.smh.com.au");
+
+	</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="no-js"> <!-- make a class for people without javascript -->
+<head>
+	<title></title>
+	<style type="text/css">
+		.no-js {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	// if javascript is enabled, removes html no-js class
+	var elDocument = document.documentElement;
+	console.log(elDocument);
+	elDocument.className = elDocument.className.replace(/(^|\)s)no-js(\s|$)/, '$1');
+
+</script>
+
+</body>
+</html>

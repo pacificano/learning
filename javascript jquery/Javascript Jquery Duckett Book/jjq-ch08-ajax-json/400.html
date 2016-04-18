@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div id="selector">
+<div class="third"><a href="vote.php?vote=gray" id="gray">gray</a></div>
+<div class="third"><a href="vote.php?vote=yellow" id="yellow">yellow</a></div>
+<div class="third"><a href="vote.php?vote=green" id="green">green</a></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$('#selector a').on('click', function (e) {
+		e.preventDefault();
+		var queryString = 'vote=' + event.target.id;
+		$.get('votes.php', queryString, function (data) {
+			$('#selector').html(data);
+		});
+	});
+</script>
+
+</body>
+</html>

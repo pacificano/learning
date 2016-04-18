@@ -1,0 +1,35 @@
+search engine optimization
+
+- basics
+	- what terms are people searching for to find your site
+	- use these terms in right places on site
+- on page techniques (on website)
+	- keywords
+	- images have alt text
+- off page techniques (off website)
+	- getting other sites to link to you
+
+
+
+on-page seo (where to put keywords)
+- page title
+- the url
+- headings
+- text (repeat keywords in main body, 2 or 3 times)
+- link text (keywords in links between pages)
+- image alt text
+- page descriptions
+
+
+
+how to pick keywords and phrass
+- brainstorm
+- ask others
+- research
+	- adwords
+	- wordtracker
+	- keyworddiscovery
+- compare (look at competition)
+- refine
+- map
+	- pick 3-5 keywords for each page

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h2 id="counter">1</h2>
+
+<ul id="list">
+	<li>Hello dawgs!</li>
+</ul>
+
+<a href="thisisntgoingtoworkanyways.html">Add item to list</a>
+
+<script type="text/javascript">
+	
+	var elList, addLink, newEl, newText, counter, listItems;
+
+	elList = document.getElementById('list');
+	addLink = document.querySelector('a');
+	counter = document.getElementById('counter');
+
+	function addItem (e) {
+		
+		e.preventDefault();
+		newEl = document.createElement('li');
+		newText = document.createTextNode('New list item');
+		newEl.appendChild(newText);
+		elList.appendChild(newEl);
+
+	}
+
+	function updateCount () {
+		
+		listItems = list.getElementsByTagName('li').length;
+		counter.innerHTML = listItems;
+
+	}
+
+	addLink.addEventListener('click', addItem, false);
+	elList.addEventListener('DOMNodeInserted', updateCount, false);
+
+</script>
+
+</body>
+</html>

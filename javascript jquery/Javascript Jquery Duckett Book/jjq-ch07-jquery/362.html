@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<ul>
+	<li id="zero"><em>figs</em></li>
+	<li id="one" class="hot">pinenuts</li>
+	<li id="two" class="hot">honey</li>
+	<li id="three" class="hot">vinegar</li>
+</ul>
+
+<!-- create a fallback incase the hosted version of jquery doesnt load -->
+<script>
+	window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"><\/script>')
+</script>
+
+<script type="text/javascript">
+	
+	alert($('ul').text());
+
+</script>
+
+</body>
+</html>

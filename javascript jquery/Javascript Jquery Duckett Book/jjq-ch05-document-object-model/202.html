@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+		.hot {
+			background-color: red;
+		}
+
+		.cool {
+			background-color: green;
+		}
+
+		.blue {
+			background-color: blue;
+		}
+
+		.whiteText {
+			background-color: green;
+			color: white;
+			font-size: 300%;
+		}
+
+		.backToNormal {
+
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<h1 id="id">List King</h1>
+	<h2>Buy groceries</h2>
+
+	<ul>
+		<li id="one" class="hot">fresh figs</li>
+		<li id="two" class="hot">pine nuts</li>
+		<li id="three" class="hot">honey</li>
+		<li id="four">balsamic vinegar</li>
+	</ul>
+
+	<script type="text/javascript">
+
+		var el = document.getElementById('one');
+		el.className = 'cool';
+
+		var elements = document.getElementsByClassName('hot');
+
+			if (elements.length > 1) {
+
+				var elArray = elements[1];
+				elArray.className = 'cool';
+
+			};
+
+		var elBlue = document.getElementsByTagName('li');
+		elBlue[3].className = 'blue';
+
+		var textSelect = document.querySelector('li.cool');
+		textSelect.className = 'whiteText';
+
+		var selectAll = document.querySelectorAll('li');
+		selectAll[1].className = 'backToNormal';
+		selectAll[3].className = 'backToNormal';
+
+		var blueItems = document.querySelectorAll('li');
+		if (blueItems.length > 0) {
+			for (var i = 0; i < blueItems.length; i++) {
+				blueItems[i].className = 'blue';
+			}
+		};
+
+		
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	// Arrays in an object
+
+	var costs = { 
+		room1: {items:[420, 40, 10]},
+		room2: {items:[460, 20, 20]},
+		room3: {items:[230, 0, 0]},
+		room4: {items:[620, 150, 60]},
+	};
+
+	console.log(costs.room1.items[1]);
+
+
+
+	// Objects in an array
+
+	var costs2 = [
+		{accom: 420, food: 40, phone: 10},
+		{accom: 460, food: 20, phone: 20},
+		{accom: 230, food: 0, phone: 0},
+		{accom: 620, food: 150, phone: 60},
+	];
+
+	console.log(costs2[0].phone);
+
+</script>
+</body>
+</html>

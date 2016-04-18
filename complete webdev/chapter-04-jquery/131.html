@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Accordion</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+	<style type="text/css">
+
+		#square {
+
+			height: 200px;
+			width: 200px;
+			background-color: grey;
+
+		}
+
+		.circle {
+
+			height: 300px;
+			width: 300px;
+			background-color: red;
+			border-radius: 150px;
+
+		}
+
+		#bothTogether {
+
+			height: 400px;
+			width: 150px;
+			background-color: pink;
+
+		}
+
+		#target {
+
+			height: 300px;
+			width: 300px;
+			background-color: yellow;
+
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div id="accordion">
+
+		<h3>Title</h3>
+		<div>
+			<p>This is some text. This is some text. This is some text. This is some text.</p>
+		</div>
+
+		<h3>Title</h3>
+		<div>
+			<p>This is some text. This is some text. This is some text. This is some text.</p>
+		</div>
+
+		<h3>Title</h3>
+		<div>
+			<p>This is some text. This is some text. This is some text. This is some text.</p>
+		</div>
+
+		<h3>Title</h3>
+		<div>
+			<p>This is some text. This is some text. This is some text. This is some text.</p>
+		</div>
+
+		<h3>Title</h3>
+		<div>
+			<p>This is some text. This is some text. This is some text. This is some text.</p>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+
+		$("#accordion").accordion();
+
+	</script>
+
+</body>
+</html>

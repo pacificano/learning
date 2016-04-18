@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML: float</title>
+	<style type="text/css">
+		div, p {
+			border: 1px solid red;
+		}
+		#normalDiv div, #normalDiv p {
+			border: 1px solid red;
+			padding: 0px;
+			margin: 0px;
+		}
+		.parent {
+			width: 400px;
+		}
+		.one {
+			float: right;
+			width: 100px;
+			background-color: green;
+		}
+		.two {
+			background-color: pink;
+		}
+
+		#weirdFloat {
+			width: 756px;
+		}
+		#weirdFloat p {
+			width: 230px;
+			float: left;
+			margin: 5px;
+			padding: 5px;
+			background-color: grey;
+		}
+		.fourthEl {
+			background-color: lightgreen !important;
+		}
+
+		#clearedFloat {
+			width: 756px;
+		}
+		#clearedFloat p {
+			width: 230px;
+			float: left;
+			margin: 5px;
+			padding: 5px;
+			background-color: lightblue;
+		}
+		.clearLeft {
+			clear: left;
+		}
+	</style>
+</head>
+<body>
+
+<div id="normalDiv" class="parent">
+	<p class="one">remember to give floated elements width...</p>
+	<p class="two">elements should flow around the floated element. elements should flow around the floated element. elements should flow around the floated element.</p>
+</div>
+
+<div id="weirdFloat">
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. </p>
+
+	<p class="fourthEl">See how weird float can be when the height means there is space to put the next floated element right underneath it? See. See. Seeeeeeeeeeeee.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p> 
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+
+	<p class="fourthEl">In this case, the height was big enough to bump the next element to a new line.</p>
+
+	<p>In this case, the height was big enough to bump the next element to a new line.</p>
+
+	<p>In this case, the height was big enough to bump the next element to a new line.</p>
+</div>
+
+<div id="clearedFloat">
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+
+	<p><strong>The clear property allows you to say that no element (within the same containing element) should touch the left or right- hand sides of a box.</strong></p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. </p>
+
+	<p class="fourthEl clearLeft">See how weird float can be when the height means there is space to put the next floated element right underneath it? See. See. Seeeeeeeeeeeee.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p> 
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+
+	<p><strong>If a containing element only contains floated elements, some browsers will treat it as if it is zero pixels tall. As you can see in this example, the one pixel border assigned to the containing element has collapsed, so the box looks like a two pixel line. Thats why it has been such a pain to try and add padding and margin etc.</strong></p>
+
+	<p class="fourthEl">In this case, the height was big enough to bump the next element to a new line.</p>
+
+	<p>In this case, the height was big enough to bump the next element to a new line.</p>
+
+	<p>In this case, the height was big enough to bump the next element to a new line.</p>
+</div>
+
+</body>
+</html>

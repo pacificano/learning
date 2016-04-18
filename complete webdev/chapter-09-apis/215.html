@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geocoding</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<script type="text/javascript">
+
+		var addressCity = "10 Norton Street, Leichhardt";
+
+		$.ajax({
+			type: "GET",
+			url: "https://maps.googleapis.com/maps/api/geocode/xml?address=" + addressCity + "&key=API_KEY",
+			dataType: "xml",
+			success: processXML			
+		});
+
+		function processXML(xml) {
+
+			$(xml).find("address_component").each(function() {
+				// get the xml and find the value
+				// and loop through each copy and run my function
+
+				if ($(this).find("type").text() == "postal_code") {
+
+					alert($(this).find("long_name").text());
+
+				};
+			});
+
+		}
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

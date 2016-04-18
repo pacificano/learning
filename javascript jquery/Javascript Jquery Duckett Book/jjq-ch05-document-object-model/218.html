@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+		.complete {
+			background-color: yellow;
+		}
+
+		.cool {
+			background-color: lightblue;
+		}
+
+	</style>
+
+</head>
+<body>
+
+<p>Browsers put a 'whitespace' node between elements for some reason. Which makes nodes hard to select via siblings/parents. This is why most people now use jQuery. Selecting works though when there is no whitespace.</p>
+
+<p>You can do a weird trick by putting the closing brack on the next line next to the starting bracket.</p>
+
+	<ul
+		><li id="one" class="hot"><em>fresh</em> figs</li
+		><li id="two" class="hot">pine nuts</li
+		><li id="three" class="hot">honey</li
+		><li id="four">balsamic vinegar</li
+	></ul>
+
+	<script type="text/javascript">
+
+		var startItem = document.getElementsByTagName('ul')[0];
+		var firstItem = startItem.firstChild;
+		var lastItem = startItem.lastChild;
+
+		firstItem.setAttribute('class', 'complete');
+		lastItem.setAttribute('class', 'cool');
+
+	</script>
+
+</body>
+</html>

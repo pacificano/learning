@@ -1,0 +1,76 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body:before {
+  background-image: -webkit-linear-gradient(left, transparent 0, lightblue 0, lightblue 5.2726579012%, transparent 5.2726579012%, transparent 7.286718623%, lightblue 7.286718623%, lightblue 12.5593765241%, transparent 12.5593765241%, transparent 14.573437246%, lightblue 14.573437246%, lightblue 19.8460951471%, transparent 19.8460951471%, transparent 21.860155869%, lightblue 21.860155869%, lightblue 27.1328137701%, transparent 27.1328137701%, transparent 29.146874492%, lightblue 29.146874492%, lightblue 34.4195323931%, transparent 34.4195323931%, transparent 36.4335931149%, lightblue 36.4335931149%, lightblue 41.7062510161%, transparent 41.7062510161%, transparent 43.7203117379%, lightblue 43.7203117379%, lightblue 48.9929696391%, transparent 48.9929696391%, transparent 51.0070303609%, lightblue 51.0070303609%, lightblue 56.2796882621%, transparent 56.2796882621%, transparent 58.2937489839%, lightblue 58.2937489839%, lightblue 63.5664068851%, transparent 63.5664068851%, transparent 65.5804676069%, lightblue 65.5804676069%, lightblue 70.853125508%, transparent 70.853125508%, transparent 72.8671862299%, lightblue 72.8671862299%, lightblue 78.139844131%, transparent 78.139844131%, transparent 80.1539048529%, lightblue 80.1539048529%, lightblue 85.426562754%, transparent 85.426562754%, transparent 87.4406234759%, lightblue 87.4406234759%, lightblue 92.713281377%, transparent 92.713281377%, transparent 94.7273420988%, lightblue 94.7273420988%, lightblue 100%, transparent 100%);
+  background-image: -webkit-linear-gradient(right, transparent 0, lightblue 0, lightblue 5.2726579012%, transparent 5.2726579012%, transparent 7.286718623%, lightblue 7.286718623%, lightblue 12.5593765241%, transparent 12.5593765241%, transparent 14.573437246%, lightblue 14.573437246%, lightblue 19.8460951471%, transparent 19.8460951471%, transparent 21.860155869%, lightblue 21.860155869%, lightblue 27.1328137701%, transparent 27.1328137701%, transparent 29.146874492%, lightblue 29.146874492%, lightblue 34.4195323931%, transparent 34.4195323931%, transparent 36.4335931149%, lightblue 36.4335931149%, lightblue 41.7062510161%, transparent 41.7062510161%, transparent 43.7203117379%, lightblue 43.7203117379%, lightblue 48.9929696391%, transparent 48.9929696391%, transparent 51.0070303609%, lightblue 51.0070303609%, lightblue 56.2796882621%, transparent 56.2796882621%, transparent 58.2937489839%, lightblue 58.2937489839%, lightblue 63.5664068851%, transparent 63.5664068851%, transparent 65.5804676069%, lightblue 65.5804676069%, lightblue 70.853125508%, transparent 70.853125508%, transparent 72.8671862299%, lightblue 72.8671862299%, lightblue 78.139844131%, transparent 78.139844131%, transparent 80.1539048529%, lightblue 80.1539048529%, lightblue 85.426562754%, transparent 85.426562754%, transparent 87.4406234759%, lightblue 87.4406234759%, lightblue 92.713281377%, transparent 92.713281377%, transparent 94.7273420988%, lightblue 94.7273420988%, lightblue 100%, transparent 100%);
+  background-image: linear-gradient(to left, transparent 0, lightblue 0, lightblue 5.2726579012%, transparent 5.2726579012%, transparent 7.286718623%, lightblue 7.286718623%, lightblue 12.5593765241%, transparent 12.5593765241%, transparent 14.573437246%, lightblue 14.573437246%, lightblue 19.8460951471%, transparent 19.8460951471%, transparent 21.860155869%, lightblue 21.860155869%, lightblue 27.1328137701%, transparent 27.1328137701%, transparent 29.146874492%, lightblue 29.146874492%, lightblue 34.4195323931%, transparent 34.4195323931%, transparent 36.4335931149%, lightblue 36.4335931149%, lightblue 41.7062510161%, transparent 41.7062510161%, transparent 43.7203117379%, lightblue 43.7203117379%, lightblue 48.9929696391%, transparent 48.9929696391%, transparent 51.0070303609%, lightblue 51.0070303609%, lightblue 56.2796882621%, transparent 56.2796882621%, transparent 58.2937489839%, lightblue 58.2937489839%, lightblue 63.5664068851%, transparent 63.5664068851%, transparent 65.5804676069%, lightblue 65.5804676069%, lightblue 70.853125508%, transparent 70.853125508%, transparent 72.8671862299%, lightblue 72.8671862299%, lightblue 78.139844131%, transparent 78.139844131%, transparent 80.1539048529%, lightblue 80.1539048529%, lightblue 85.426562754%, transparent 85.426562754%, transparent 87.4406234759%, lightblue 87.4406234759%, lightblue 92.713281377%, transparent 92.713281377%, transparent 94.7273420988%, lightblue 94.7273420988%, lightblue 100%, transparent 100%);
+  content: "";
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  max-width: 960px;
+  opacity: 0.4;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: 9999; }
+
+section {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto; }
+  section::after {
+    clear: both;
+    content: "";
+    display: table; }
+  section aside {
+    float: left;
+    display: block;
+    margin-right: 2.0140607218%;
+    width: 19.8460951471%;
+    background-color: #ffcccc; }
+    section aside:last-child {
+      margin-right: 0; }
+  section article {
+    float: left;
+    display: block;
+    margin-right: 2.0140607218%;
+    width: 63.5664068851%;
+    margin-right: 0;
+    background-color: #e6f2e6; }
+    section article:last-child {
+      margin-right: 0; }
+  section p.two {
+    float: left;
+    display: block;
+    margin-right: 2.0140607218%;
+    width: 56.2796882621%;
+    margin-left: 21.860155869%;
+    background-color: #dfbfdf; }
+    section p.two:last-child {
+      margin-right: 0; }
+
+p.one {
+  float: left;
+  display: block;
+  margin-right: 2.0140607218%;
+  width: 41.7062510161%;
+  background-color: #ffffbf; }
+  p.one:last-child {
+    margin-right: 0; }
+
+p.two {
+  float: left;
+  display: block;
+  margin-right: 2.0140607218%;
+  width: 41.7062510161%;
+  margin-left: 21.860155869%;
+  background-color: #ffeff2; }
+  p.two:last-child {
+    margin-right: 0; }

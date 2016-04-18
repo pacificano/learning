@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div class="two-thirds">
+	
+	<form id="application" action="apply.php">
+		<label for="username">Name</label>
+		<input type="text" id="username" name="username"><br/>
+		<label for="answer">Answer</label>
+		<textarea id="answer" name="answer"></textarea>
+		<input type="submit">
+	</form>
+
+</div>
+
+<script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+
+<script type="text/javascript">
+	
+	if (window.sessionStorage) {
+		
+		var txtUsername = document.getElementById('username');
+		var txtAnswer = document.getElementById('answer');
+
+		txtUsername.value = sessionStorage.getItem('username');
+		txtAnswer.value = sessionStorage.getItem('answer');
+
+		txtUsername.addEventListener('input', function () {
+			sessionStorage.setItem('username', txtUsername.value);
+		}, false);
+
+		txtAnswer.addEventListener('input', function () {
+			sessionStorage.setItem('answer', txtAnswer.value);
+		}, false);
+		
+	}
+
+</script>
+</body>
+</html>

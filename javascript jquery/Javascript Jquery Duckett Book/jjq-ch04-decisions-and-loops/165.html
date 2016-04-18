@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		var score1 = 8;
+		var score2 = 8;
+		var pass1 = 6;
+		var pass2 = 6;
+
+		// check where user passed both rounds
+		var passBoth = (score1 >= pass1) && (score2 >= pass2);
+
+		// create message
+		var msg = 'Both rounds passed: ' + passBoth;
+		document.write(msg);
+		document.write("<br />");
+
+		// check if user passed one of two rounds
+		var minPass = (score1 >= pass1) || (score2 >= pass2);
+
+		// create message
+		var msg1 = 'Resit require: ' + !(minPass);
+		document.write(msg1);
+
+	</script>
+
+</body>
+</html>

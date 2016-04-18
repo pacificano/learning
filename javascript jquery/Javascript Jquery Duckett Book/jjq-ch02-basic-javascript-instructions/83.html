@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		var firstName = 'Ivy ';
+		var lastName = 'Stone';
+		var fullName = firstName + lastName;
+
+		document.write(fullName + '<br />');
+
+		// Mixing numbers and strings
+
+			// having numbers in quotes turns it into a string
+			var cost1 = '7';
+			var cost2 = '9';
+			var total = cost1 + cost2;
+
+			document.write(total + '<br />');
+
+
+			// adding a number with a string turns the number into a string
+			var number = 12; 
+			var street = 'Ivy Road';
+			var add = number + street;
+
+			document.write(add + '<br />');
+
+
+			// trying use arithmetic on strings will result in a NaN (not a number) value
+			var score = 'seven';
+			var score2 = 'nine';
+			var total = score * score2;
+
+			document.write(total);
+		
+
+	</script>
+</body>
+</html>

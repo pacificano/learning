@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div class="content">
+		
+		<div id="title">
+			
+			Howdy <span id="name">friend</span>!
+
+		</div>
+
+		<div id="note">
+			
+			Take a look around...
+
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+
+		var username;
+		var message;
+		username = 'Molly';
+		message = 'See our upcoming range';
+
+		var elName = document.getElementById('name');
+		elName.textContent = username;
+
+		var elNote = document.getElementById('note');
+		elNote.textContent = message;
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title> 
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	function getArea (width, height) {
+
+		return width * height;
+		// returns the area to the code that called it
+
+	}
+
+	document.write(getArea(3, 5));
+	document.write('<br />');
+
+	wallWidth = 26;
+	wallHeight = 7;
+
+	document.write(getArea(wallWidth, wallHeight));
+	document.write('<br />');
+
+
+
+	function calculateArea (width, height) {
+
+		var area = width * height;
+		return area;
+		// returns the area to the code that called it
+
+	}
+
+	var wallOne = calculateArea(8, 12);
+	var wallTwo = calculateArea(69, 1);
+
+	document.write(wallOne + '<br />' + wallTwo);
+
+</script>
+
+</body>
+</html>

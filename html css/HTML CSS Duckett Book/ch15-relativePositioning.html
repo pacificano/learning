@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML: relative positioning</title>
+	<style type="text/css">
+		.one {
+			background-color: pink;
+			width: 100%;
+		}
+		.two {
+			background-color: green;
+			width: 50%;
+		}
+		p {
+			width: 50%;
+			background-color: blue;
+			position: relative;
+			right: -25%;
+			color: yellow;
+		}
+	</style>
+</head>
+<body>
+
+<div class="one">
+	<div class="two">
+		<p>Here is a relatively positioned div. width and position are based on the parent div. not the window.</p>
+	</div>
+</div>
+
+</body>
+</html>

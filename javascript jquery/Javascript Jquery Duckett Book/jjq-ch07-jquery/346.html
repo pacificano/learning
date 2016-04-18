@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+		.hot {
+			font-size: 200%;
+		}
+
+		.seasonal {
+			font-weight: bold;
+		}
+
+		.favorite {
+			background-color: red;
+		}
+
+		#group {
+			background-color: purple;
+		}
+
+		.cool {
+			font-size: 67%;
+			color: green;
+		}
+
+		.complete {
+			text-decoration: underline;
+			background-color: orange;
+		}
+
+		li {
+			background-color: pink;
+		}
+
+	</style>
+
+</head>
+<body>
+
+<h2>HERE IS MY HEADING</h2>
+
+<ul>
+	<li id="zero"><em>figs</em></li>
+	<li id="one" class="hot">pinenuts</li>
+	<li id="two" class="hot"><span style="color: blue;">honey</span></li>
+	<li id="three" class="hot">vinegar</li>
+</ul>
+
+<p id="notes"></p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(function () {
+		
+		var $listItems = $('li');
+		$listItems.filter('.hot:last').removeClass('hot');
+		$('li:not(.hot)').addClass('cool');
+		$listItems.has('em').addClass('complete');
+
+		$listItems.each(function () {
+			var $this = $(this);
+			if ($this.is('.hot')) {
+				$this.prepend('Priority item: ');
+			};
+		});
+
+		$('li:contains("honey")').append(' (local)');
+
+	});
+
+</script>
+
+</body>
+</html>

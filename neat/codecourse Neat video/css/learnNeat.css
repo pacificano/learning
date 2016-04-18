@@ -1,0 +1,76 @@
+@import url(bower_components/normalize-css/normalize.css);
+p {
+  padding: 100px; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body:before {
+  background-image: -webkit-linear-gradient(left, transparent 0, lightblue 0, lightblue 7.6923076923%, transparent 7.6923076923%, transparent 10.2564102564%, lightblue 10.2564102564%, lightblue 17.9487179487%, transparent 17.9487179487%, transparent 20.5128205128%, lightblue 20.5128205128%, lightblue 28.2051282051%, transparent 28.2051282051%, transparent 30.7692307692%, lightblue 30.7692307692%, lightblue 38.4615384615%, transparent 38.4615384615%, transparent 41.0256410256%, lightblue 41.0256410256%, lightblue 48.7179487179%, transparent 48.7179487179%, transparent 51.2820512821%, lightblue 51.2820512821%, lightblue 58.9743589744%, transparent 58.9743589744%, transparent 61.5384615385%, lightblue 61.5384615385%, lightblue 69.2307692308%, transparent 69.2307692308%, transparent 71.7948717949%, lightblue 71.7948717949%, lightblue 79.4871794872%, transparent 79.4871794872%, transparent 82.0512820513%, lightblue 82.0512820513%, lightblue 89.7435897436%, transparent 89.7435897436%, transparent 92.3076923077%, lightblue 92.3076923077%, lightblue 100%, transparent 100%);
+  background-image: -webkit-linear-gradient(right, transparent 0, lightblue 0, lightblue 7.6923076923%, transparent 7.6923076923%, transparent 10.2564102564%, lightblue 10.2564102564%, lightblue 17.9487179487%, transparent 17.9487179487%, transparent 20.5128205128%, lightblue 20.5128205128%, lightblue 28.2051282051%, transparent 28.2051282051%, transparent 30.7692307692%, lightblue 30.7692307692%, lightblue 38.4615384615%, transparent 38.4615384615%, transparent 41.0256410256%, lightblue 41.0256410256%, lightblue 48.7179487179%, transparent 48.7179487179%, transparent 51.2820512821%, lightblue 51.2820512821%, lightblue 58.9743589744%, transparent 58.9743589744%, transparent 61.5384615385%, lightblue 61.5384615385%, lightblue 69.2307692308%, transparent 69.2307692308%, transparent 71.7948717949%, lightblue 71.7948717949%, lightblue 79.4871794872%, transparent 79.4871794872%, transparent 82.0512820513%, lightblue 82.0512820513%, lightblue 89.7435897436%, transparent 89.7435897436%, transparent 92.3076923077%, lightblue 92.3076923077%, lightblue 100%, transparent 100%);
+  background-image: linear-gradient(to left, transparent 0, lightblue 0, lightblue 7.6923076923%, transparent 7.6923076923%, transparent 10.2564102564%, lightblue 10.2564102564%, lightblue 17.9487179487%, transparent 17.9487179487%, transparent 20.5128205128%, lightblue 20.5128205128%, lightblue 28.2051282051%, transparent 28.2051282051%, transparent 30.7692307692%, lightblue 30.7692307692%, lightblue 38.4615384615%, transparent 38.4615384615%, transparent 41.0256410256%, lightblue 41.0256410256%, lightblue 48.7179487179%, transparent 48.7179487179%, transparent 51.2820512821%, lightblue 51.2820512821%, lightblue 58.9743589744%, transparent 58.9743589744%, transparent 61.5384615385%, lightblue 61.5384615385%, lightblue 69.2307692308%, transparent 69.2307692308%, transparent 71.7948717949%, lightblue 71.7948717949%, lightblue 79.4871794872%, transparent 79.4871794872%, transparent 82.0512820513%, lightblue 82.0512820513%, lightblue 89.7435897436%, transparent 89.7435897436%, transparent 92.3076923077%, lightblue 92.3076923077%, lightblue 100%, transparent 100%);
+  content: "";
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  opacity: 0.2;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: 9999; }
+  @media screen and (max-width: 768px) {
+    body:before {
+      background-image: -webkit-linear-gradient(left, transparent 0, lightblue 0, lightblue 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, lightblue 12.9032258065%, lightblue 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, lightblue 25.8064516129%, lightblue 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, lightblue 38.7096774194%, lightblue 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, lightblue 51.6129032258%, lightblue 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, lightblue 64.5161290323%, lightblue 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, lightblue 77.4193548387%, lightblue 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, lightblue 90.3225806452%, lightblue 100.0%, transparent 100.0%);
+      background-image: -webkit-linear-gradient(right, transparent 0, lightblue 0, lightblue 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, lightblue 12.9032258065%, lightblue 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, lightblue 25.8064516129%, lightblue 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, lightblue 38.7096774194%, lightblue 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, lightblue 51.6129032258%, lightblue 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, lightblue 64.5161290323%, lightblue 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, lightblue 77.4193548387%, lightblue 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, lightblue 90.3225806452%, lightblue 100.0%, transparent 100.0%);
+      background-image: linear-gradient(to left, transparent 0, lightblue 0, lightblue 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, lightblue 12.9032258065%, lightblue 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, lightblue 25.8064516129%, lightblue 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, lightblue 38.7096774194%, lightblue 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, lightblue 51.6129032258%, lightblue 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, lightblue 64.5161290323%, lightblue 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, lightblue 77.4193548387%, lightblue 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, lightblue 90.3225806452%, lightblue 100.0%, transparent 100.0%); } }
+  @media screen and (max-width: 480px) {
+    body:before {
+      background-image: -webkit-linear-gradient(left, transparent 0, lightblue 0, lightblue 20%, transparent 20%, transparent 26.6666666667%, lightblue 26.6666666667%, lightblue 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, lightblue 53.3333333333%, lightblue 73.3333333333%, transparent 73.3333333333%, transparent 80%, lightblue 80%, lightblue 100%, transparent 100%);
+      background-image: -webkit-linear-gradient(right, transparent 0, lightblue 0, lightblue 20%, transparent 20%, transparent 26.6666666667%, lightblue 26.6666666667%, lightblue 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, lightblue 53.3333333333%, lightblue 73.3333333333%, transparent 73.3333333333%, transparent 80%, lightblue 80%, lightblue 100%, transparent 100%);
+      background-image: linear-gradient(to left, transparent 0, lightblue 0, lightblue 20%, transparent 20%, transparent 26.6666666667%, lightblue 26.6666666667%, lightblue 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, lightblue 53.3333333333%, lightblue 73.3333333333%, transparent 73.3333333333%, transparent 80%, lightblue 80%, lightblue 100%, transparent 100%); } }
+
+section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff8080; }
+  section::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+div.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #8080ff; }
+  div.container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+div.parent-element {
+  background-color: #ffff80; }
+
+div.element {
+  float: left;
+  display: block;
+  margin-right: 0.2506265664%;
+  width: 49.8746867168%;
+  background-color: #80c080; }
+  @media screen and (max-width: 480px) {
+    div.element {
+      float: left;
+      display: block;
+      margin-right: 0.2506265664%;
+      width: 74.9373433584%; }
+      div.element:last-child {
+        margin-right: 0; } }
+  div.element:last-child {
+    margin-right: 0; }

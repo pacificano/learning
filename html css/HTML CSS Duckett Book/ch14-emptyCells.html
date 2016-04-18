@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML: empty table cells</title>
+	<style type="text/css">
+		td, th {
+			border: 2px solid red;
+			padding: 20px;
+		}
+		.one {
+			empty-cells: show;
+		}
+		.two {
+			empty-cells: hide;
+			border-spacing: 0px;
+		}
+		.three {
+			border-spacing: 5px 20px;
+		}
+		.four {
+			border-spacing: 0px;
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+
+<table class="one">
+	<tr>
+		<th colspan="2">showing empty</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>2</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td></td>
+	</tr>
+</table>
+
+<table class="two">
+	<tr>
+		<th colspan="2">hiding empty</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>2</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td></td>
+	</tr>
+</table>
+
+<table class="four">
+	<tr>
+		<th colspan="2">collapsing borders</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>2</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td></td>
+	</tr>
+</table>
+
+<table class="three">
+	<tr>
+		<th colspan="2">border spacing</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>2</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td></td>
+	</tr>
+</table>
+
+</body>
+</html>

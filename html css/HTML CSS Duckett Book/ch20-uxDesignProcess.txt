@@ -1,0 +1,134 @@
+UX design process
+
+phase 1 - determine users needs
+phase 2 - develop user experience and information architecture design that meets needs
+phase 3 - implement progressively
+phase 4 - develop new capabilities
+
+
+
+phase 1 - determine users needs
+
+steps
+- make shortlist of personas and user situations
+- determine primary and secondary personas
+- rank personas and users on relevance, frequency, and importance
+- compare with current users
+
+techniques
+- interviews with stakeholders
+- desk analysis (what are competition and industry doing)
+- survey teachers, users and non-users
+- interviews with users (~5)
+- internal brain storm
+
+deliverables
+- list of personas and use cases, sorted by priority
+- interview transcripts
+- survey results
+
+timeframe
+- 2 weeks
+
+
+
+phase 2 - develop user experience and information architecture design that meets needs
+
+steps
+- map out current content architecture
+- combine interviews, design, and ideas into prototypes
+- test prototypes with users -> iterate towards coherent, validated solution
+
+techniques
+- user interviews (~8 for each of the 3 personas)
+- card sort information by priority
+- wire framing
+- user acceptance testing
+
+deliverables
+- sketches and paper prototypes
+- testing materials
+- sitemap and navigation architecture
+- final wireframes and clickable prototype
+
+timeframe
+- 6 weeks
+
+
+
+user experience process: research -> design -> iterate
+
+research: identify key users, their needs, tasks they perform
+design: create prototypes for design solutions, test with key users
+iterate: modify designs after testing, validated final solution
+
+
+
+information architecture: user flows -> information architecture
+
+user flows: flow diagrams to show the ways users interact and search for content
+information architecture: organise content into logical structure based on user needs
+
+
+
+user journey
+context -> user story -> product -> outcome
+
+context: “i’m a teacher and need to teach a module i dont know”
+user story: “i need worksheets from another teacher. i’ll email them. wait. i can find it on the website”
+product: “hmm i cant search. but i can use my login. here it is. download”
+outcome: “i got what i needed but that was frustrating”
+
+
+
+typical UX design output
+- card sorting for information architecture
+- personas
+- user flow
+- wireframes
+
+
+
+implement the solution progressively
+
+steps
+- work with stakeholders to understand resources and tech available
+- prioritise implementation
+- determine what metrics to monitor
+- create roadmap which distributes roles and tasks
+
+techniques
+- stakeholder interviews
+- sprint planning
+- liaison with external parties as required
+
+deliverables
+- project plan
+- product road-map
+- list of tasks
+
+timeframe
+- 1 week
+
+
+
+develop new capabilities (optional)
+
+approach
+- understand internal opportunities
+- benchmark against similar offerings, best-in-class, and most innovative
+- set high level objectives
+
+techniques
+- interviews with industry experts
+- internal interviews
+
+deliverables
+- strategic presentation summarising opportunity and required resources
+- high level plan focused around talent and management
+- an advisory panel to accompany and facilitate the transition
+
+timeframe
+- 2 weeks
+
+Source: http://www.slideshare.net/MartaFioni/ux-design-process-42105277

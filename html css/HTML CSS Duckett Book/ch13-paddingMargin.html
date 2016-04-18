@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML: boxes</title>
+	<style type="text/css">
+		#one {
+			background-color: hsl(330,100%,50%);
+		}
+		#two {
+			background-color: rgba(0,0,0,0.5);
+			margin: 25px;
+		}
+		#three {
+			background-color: hsla(192,76%,40%,1);
+		}
+		#four {
+			background-color: lightblue;
+			padding: 25px;
+		}
+		#five {
+			background-color: blue;
+		}
+		#six {
+			background-color: green;
+			padding: 25px;
+			margin: 25px;
+		}
+		#seven {
+			background-color: yellow;
+		}
+		#eight {
+			background-color: purple;
+			border: 25px solid yellow;
+		}
+		#nine {
+			margin-bottom: 25px;
+		}
+		#ten {
+			margin-top: 50px;
+		}
+		#eleven {
+			border-width: 1px 2px 3px 4px;
+			border-color: red green yellow blue;
+			margin: 10px;
+		}
+		#twelve {
+			border-width: 3px 5px;
+			border-color: blue yellow;
+			border-style: solid double dashed ridge;
+			margin: 10px;
+		}
+
+		div {
+			border: 1px solid red;
+			width: 200px;
+			height: 200px;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="one"><p>200px wide</p></div>
+	<div id="two"><p>200px wide with 25px margin</p></div>
+	<div id="three"><p>200px wide</p></div>
+	<div id="four"><p>200px wide with 25px padding</p></div>
+	<div id="five"><p>200px wide</p></div>
+	<div id="six"><p>200px wide with 25px padding and 25px margin</p></div>
+	<div id="seven"><p>200px wide. as you can see, padding and margin ADD to the width of the element.</p></div>
+	<div id="eight"><p>200px wide with 25px border. even border is included to the width of an element.</p></div>
+	<div id="nine">bottom margin of 25px.</div>
+	<div id="ten">top margin of 50px. in theory, it should equal 50px, not 75px. (it takes the larger value of the touching margins. doesnt add them.) If one box sits on top of another, margins are collapsed, which means the larger of the two margins will be used and the smaller will be disregarded.</div>
+	<div id="eleven">This div has different border widths and colours. The order goes clockwise from top. Top, right, bottom, left.</div>
+	<div id="twelve">If you only have two values, the first will be for top and bottom, and the second will be for left and right.</div>
+
+</body>
+</html>

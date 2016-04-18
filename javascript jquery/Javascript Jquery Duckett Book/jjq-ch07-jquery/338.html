@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+		.hot {
+			font-size: 200%;
+		}
+
+		.seasonal {
+			font-weight: bold;
+		}
+
+		.favorite {
+			background-color: red;
+		}
+
+		#group {
+			background-color: purple;
+		}
+
+		li {
+			background-color: pink;
+		}
+
+	</style>
+
+</head>
+<body>
+
+<ul>
+	<li id="zero"><em>figs</em></li>
+	<li id="one" class="hot">pinenuts</li>
+	<li id="two" class="hot"><span style="color: blue;">honey</span></li>
+	<li id="three" class="hot">vinegar</li>
+</ul>
+
+<p id="notes"></p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(function () {
+		
+		var listItem, itemStatus, eventType;
+
+		$('ul').on(
+			'click mouseover',
+			':not(#three)',
+			{status: 'important'},
+			function (e) {
+				listItem = 'Item: ' + e.target.textContent + '<br />';
+				itemStatus = 'Status: ' + e.data.status + '<br />';
+				eventType = 'Event: ' + e.type;
+				$('#notes').html(listItem + itemStatus + eventType);
+			}
+			);
+
+	});
+
+</script>
+
+</body>
+</html>

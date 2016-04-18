@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+		.hot {
+			font-size: 200%;
+		}
+
+		.seasonal {
+			font-weight: bold;
+		}
+
+		.favorite {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+
+<ul>
+	<li id="zero"><em>figs</em></li>
+	<li id="one" class="hot">pinenuts</li>
+	<li id="two" class="hot">honey</li>
+	<li id="three" class="hot">vinegar</li>
+</ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+	$(function () { // wait till page is loaded before running code
+
+		$('li[id!="one"]')
+		.hide()
+		.delay(500)
+		.fadeIn(1400);
+
+	});
+
+</script>
+
+</body>
+</html>

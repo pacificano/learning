@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+		.hot {
+			font-size: 200%;
+		}
+
+		.seasonal {
+			font-weight: bold;
+		}
+
+		.favorite {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+
+<ul>
+	<li><em>figs</em></li>
+	<li class="hot">pinenuts</li>
+	<li class="hot">honey</li>
+	<li class="hot">vinegar</li>
+</ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+	
+	$('li em').addClass('seasonal');
+	$('li.hot').addClass('favorite');
+	
+</script>
+
+</body>
+</html>

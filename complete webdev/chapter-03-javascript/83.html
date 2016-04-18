@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Variables</title>
+
+	<style type="text/css">
+
+	#circle {
+		width: 200px;
+		height: 200px; 
+		border-radius: 100px;
+		background: red;
+	}
+
+	</style>
+
+</head>
+<body>
+
+	<div id="circle"></div>
+
+	<br />
+
+	<input id="colorInput"><button id="circleDelete">Change color</button>
+
+	<script type="text/javascript">
+
+	document.getElementById("circleDelete").onclick = function(){
+
+		/* 
+		has to be inside the onclick because if its outside it sets it before the click.
+		put it inside and it sets when clicked
+		*/
+		
+		var newColor = document.getElementById("colorInput").value;
+
+		document.getElementById("circle").style.background = newColor;
+
+	}
+
+	</script>
+
+</body>
+</html>

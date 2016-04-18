@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flex grow</title>
+	<style type="text/css">
+		body, html {
+			height: 100%;
+		}
+		.parent {
+			display: flex;
+			height: 100%;
+			background-color: blue;
+		}
+		.child {
+			height: 100px;
+			margin: auto;
+			background-color: yellow;
+			border: 1px solid red;
+		}
+		.flexGrowOne {
+			flex-grow: 0;
+		}
+		.flexGrowTwo {
+			flex-grow: 2;
+		}
+		.flexGrowFour {
+			flex-grow: 4;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="parent">
+		<div class="child flexGrowOne">
+			hello (1)
+		</div>
+		<div class="child flexGrowTwo">
+			goodbye (2)
+		</div>
+		<div class="child flexGrowOne">
+			its it me? (3)
+		</div>
+		<div class="child flexGrowFour">
+			youre looking? (4) if it doesnt have an order it goes to the front
+		</div>
+	</div>
+
+</body>
+</html>

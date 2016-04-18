@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML: clearfix</title>
+	<style type="text/css">
+		div {
+			border: 1px solid red;
+		}
+		.parent {
+			background-color: pink;
+		}
+		img {
+			float: right;
+			width: 50%;
+		}
+		.clearfix {
+			overflow: auto;
+		}
+	</style>
+</head>
+<body>
+
+<div class="parent">
+	<p>Uh oh... this image is taller than the element containing it, and it's floated, so it's overflowing outside of its container!
+	<img src="assets/SeaOtters.jpg"></p>
+</div>
+
+<div class="parent clearfix">
+	<p>This one is fixed though!</p>
+	<img src="assets/SeaOtters.jpg">
+</div>
+
+<img src="assets/clearfix.jpg">
+
+</body>
+</html>
