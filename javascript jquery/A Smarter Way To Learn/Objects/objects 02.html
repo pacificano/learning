@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A Smarter Way To Learn Javascript: Object Properties</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	// create undefined variable
+	var deal3 = {};
+	var deal4 = {};
+	deal3.market = undefined;
+
+	// can assign values
+	deal3.cost = 79.95;
+	deal3.name = "Super-saver";
+	// can assign arrays
+	deal3.features = ["Guarantee", "Free Ship"];
+	// can assign booleans
+	deal3.membersOnly = false;
+
+	// can delete properties
+	delete deal3.market;
+
+	// check if property exists
+	propertyExists = "market" in deal3;
+	alert(propertyExists);
+	alert("name" in deal3);
+
+</script>
+
+</body>
+</html>

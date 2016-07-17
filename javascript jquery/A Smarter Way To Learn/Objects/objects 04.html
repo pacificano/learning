@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A Smarter Way To Learn Javascript: Object Methods</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var plan1 = {
+		name: "Basic",
+		price: 3.99,
+		space: 100,
+		transfer: 1000,
+		pages: 10,
+		discountMonths: [6, 7, 11],
+		calcAnnual: function(percentIfDisc) {
+			var bestPrice = this.price;
+			var currDate = new Date();
+			var thisMo = currDate.getMonth();
+			for (var i = 0; i < this.discountMonths.length; i++) {
+				if (this.discountMonths[i] === thisMo) {
+					bestPrice = this.price * percentIfDisc;
+					break;
+				}
+			}
+			return bestPrice * 12;
+		}
+	};
+
+	
+
+	var annualPrice = plan1.calcAnnual(.85);
+
+	alert(annualPrice);
+
+</script>
+
+</body>
+</html>

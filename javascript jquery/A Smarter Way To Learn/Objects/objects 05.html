@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A Smarter Way To Learn Javascript: Object Constructors</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	// note the capitalised function name
+	// not necessary. but a coding convention
+	function Plan(name, price, space, transfer, pages) {
+		this.name = name;
+		this.price = price;
+		this.space = space;
+		this.transfer = transfer;
+		this.pages = pages;
+	}
+
+	// creates new object using Plan constructor
+	var plan1 = new Plan("Basic", 3.99, 100, 1000, 10);
+
+	alert(plan1.name + ' ' + plan1.pages);
+
+	var plan2 = new Plan("Premium", 5.99, 500, 5000, 50);
+	var plan3 = new Plan("Ultimate", 9.99, 2000, 20000, 500);
+
+</script>
+
+</body>
+</html>
