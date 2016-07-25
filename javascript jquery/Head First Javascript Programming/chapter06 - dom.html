@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter 6: The DOM</title>
+</head>
+<style type="text/css">
+	.redtext {
+		color: red;
+	}
+</style>
+<body>
+
+<script type="text/javascript">
+
+	function init() {
+
+		var planet = document.getElementById("greenplanet");
+		planet.setAttribute("class", "redtext");
+		planet.innerHTML = "Red Alert: hit by phaser fire!";
+
+
+
+		var scoop = document.getElementById("raspberry"); 
+		var altText = scoop.getAttribute("alt");
+		if (altText == null) {
+			console.log("Oh, I guess there isn't an alt attribute."); 
+		} else {
+			console.log("I can't see the image in the console,");
+			console.log(" but I'm told it looks like " + altText); 
+		}
+
+
+
+	} // end init
+
+	window.onload = init;
+
+</script>
+
+	<h1>Green Planet</h1>
+	<p id="greenplanet">All is well</p> 
+
+	<h1>Red Planet</h1>
+	<p id="redplanet">Nothing to report</p>
+
+	<h1>Blue Planet</h1>
+	<p id="blueplanet">All systems A-OK</p>
+
+	<img id="raspberry" src="http://guides.bestfatburnersupplements.com/wp-content/uploads/2012/02/raspberry.jpg" alt="This is a raspberry" width="300px" height="300px">
+
+</body>
+</html>
