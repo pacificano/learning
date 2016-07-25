@@ -1,0 +1,28 @@
+global versus local variables
+not declaring them will make them global
+
+do some experiments with returning values
+pages 136
+- return will stop the function and return the value
+
+pages 140-143
+
+
+
+use the for (var = 0; i < scores.length; i++) version for loops
+page 180
+
+verbosity++
+page 186
+
+adding and removing from arrays
+.push
+page 191
+
+objects (variables)
+- state (properties)
+- behaviour (methods)
+
+try and make everything an object / modularfy it
+- think in terms of objects. not proceedures
+- well designed objects 'abstract' the details of how to get the work done with the object
