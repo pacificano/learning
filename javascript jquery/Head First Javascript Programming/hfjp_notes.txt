@@ -26,3 +26,11 @@ objects (variables)
 try and make everything an object / modularfy it
 - think in terms of objects. not proceedures
 - well designed objects 'abstract' the details of how to get the work done with the object
+
+
+Just remember the intent of each (undefined and null), and know that it is most common to use null in places where an object should be but one can’t be created or found, and it is most common to find undefined when you have a variable that hasn’t been initialized, or an object with a missing property, or an array with a missing value.
+page 270
+
+use === strict
+
+

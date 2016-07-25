@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter 7: Types</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var x;
+	if (x == undefined) {
+		console.log("undefined!");
+	}
+
+
+
+	var customer = { 
+		name: "Jenny"
+	};
+
+	if (customer.phoneNumber == undefined) {
+		console.log("no phone number!");
+	}
+
+
+
+	var subject = "Just a string";
+	var probe = typeof subject; 
+	console.log(probe);
+
+	var numbernum = 26;
+	console.log(typeof numbernum);
+
+	var booboolean = true;
+	console.log(typeof booboolean);
+
+	var test4 = {};
+	var test5 = [];
+	var test6;
+	var test7 = {"abcdef": 123};
+	var test8 = ["abcdef", 123]; 
+	function test9(){return "abcdef"};
+
+	console.log(typeof test4);
+	console.log(typeof test5); 
+	console.log(typeof test6);
+	console.log(typeof test7); 
+	console.log(typeof test8);
+	console.log(typeof test9);
+
+	var test10 = null; 
+	console.log(typeof test10);
+
+
+
+	// length + charAt
+	var input = "jenny@wickedlysmart.com"; 
+	for (var i = 0; i < input.length; i++) {
+		if (input.charAt(i) === "@") {
+			console.log("There's an @ sign at index " + i);
+		} 
+	}
+
+
+	// indexOf
+	var phrase = "the cat in the hat";
+	var index = phrase.indexOf("cat"); 
+	console.log("there's a cat sitting at index " + index);
+	index = phrase.indexOf("the", 5);
+	console.log("there's a the sitting at index " + index);
+	index = phrase.indexOf("dog");
+	console.log("there's a dog sitting at index " + index);
+
+
+	// substring
+	var data = "name|phone|address"; 
+	var val = data.substring(5, 10); 
+	console.log("Substring is " + val);
+	val = data.substring(5); 
+	console.log("Substring is now " + val);
+
+
+	// split
+	var data = "name|phone|address";
+	var vals = data.split("|"); 
+	console.log("Split array is ", vals);
+
+
+</script>
+
+</body>
+</html>
