@@ -34,3 +34,26 @@ page 270
 use === strict
 
 
+model view controller
+
+model = holds the state of things. ie their values and what not
+view = updates the display
+controller = handles input
+
+pg 369
+
+
+
+One of the benefits of breaking up the code into objects and giving each object only one responsibility is
+that we can test each object to make sure it’s doing its job correctly.
+
+pg 375
+
+
+=== this book has a lot more fluff and i mean thats its whole schtick, being a bit more light hearted and 'fun' than typical workbooks. but it does make you sometimes want them to cut to the chase. where it does excel i think is setting up and explaining object oriented programming. while the other book had great descriptions on objects themselves, this one goes into the thought process behind OOP and introduces the MVC model view controller concept very well.
+
+
+
+verbosity and chaining
+pg 385
+
