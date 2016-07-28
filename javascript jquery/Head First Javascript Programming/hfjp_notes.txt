@@ -57,3 +57,15 @@ pg 375
 verbosity and chaining
 pg 385
 
+
+
+function declarations / expressions
+declarations have a name
+invoked first
+
+expression are set as variables
+
+❏ Function declarations are the tried and true way to create functions.
+❏ You always want to use function declarations because they get evaluated earlier.
+
+page 476
