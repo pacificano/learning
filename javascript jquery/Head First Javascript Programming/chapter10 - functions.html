@@ -48,19 +48,19 @@
 	}
 
 
-	function checkNoFlyList(passenger) {
-		return (passenger.name === "Dr. Evel");
+	function checkNoFlyList(doesntmatter) {
+		return (doesntmatter.name === "Dr. Evel");
 	}
 
 
-	function checkNotPaid(passenger) {
-		return (!passenger.paid);
+	function checkNotPaid(doesntmatter) {
+		return (!doesntmatter.paid);
 	}
 
 
-	function printPassenger(passenger) {
-		var message = passenger.name;
-		if (passenger.paid) {
+	function printPassenger(doesntmatter) {
+		var message = doesntmatter.name;
+		if (doesntmatter.paid) {
 			message = message + " has paid";
 		} else {
 			message = message + " has not paid";
