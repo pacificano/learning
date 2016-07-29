@@ -61,7 +61,7 @@ pg 385
 
 function declarations / expressions
 declarations have a name
-invoked first
+created first
 
 expression are set as variables
 

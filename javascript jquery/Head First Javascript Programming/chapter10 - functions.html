@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter 10: Functions</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	// function declaration
+	function quack(num) {
+		for (var i = 0; i < num; i++) {
+			console.log("Quack!"); 
+		}
+	} 
+	
+	quack(3);
+
+
+
+	// function expression
+	var fly = function(num) {
+		for (var i = 0; i < num; i++) {
+			console.log("Flying!"); 
+		}
+	};
+
+	fly(3);
+
+
+
+	var passengers = [  
+		{ name: "Jane Doloop", paid: true, ticket: "coach" },
+		{ name: "Dr. Evel", paid: true, ticket: "firstclass" },
+		{ name: "Sue Property", paid: false, ticket: "firstclass" },
+		{ name: "John Funcall", paid: true, ticket: "premium" } 
+	];
+
+
+
+	function processPassengers(passengers, test) {
+		for (var i = 0; i < passengers.length; i++) {
+			if (test(passengers[i])) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+
+	function checkNoFlyList(passenger) {
+		return (passenger.name === "Dr. Evel");
+	}
+
+
+	function checkNotPaid(passenger) {
+		return (!passenger.paid);
+	}
+
+
+	function printPassenger(passenger) {
+		var message = passenger.name;
+		if (passenger.paid) {
+			message = message + " has paid";
+		} else {
+			message = message + " has not paid";
+		}
+		console.log(message);
+		return false;
+	}
+
+
+	var allCanFly = processPassengers(passengers, checkNoFlyList);
+		if (!allCanFly) {
+			console.log("The plane can't take off: we have a passenger on the no fly list.");
+		}
+
+	var allPaid = processPassengers(passengers, checkNotPaid);
+		if (!allPaid) {
+			console.log("The plane can't take off: not everyone has paid.");
+		}
+
+
+	processPassengers(passengers, printPassenger);
+
+
+
+
+</script>
+
+</body>
+</html>
