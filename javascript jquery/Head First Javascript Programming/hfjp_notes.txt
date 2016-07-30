@@ -59,6 +59,15 @@ pg 385
 
 
 
+handler functions
+passing events
+pg 438
+
+Most JavaScript code is written to react to events.
+pg 458
+
+
+
 function declarations / expressions
 declarations have a name
 created first

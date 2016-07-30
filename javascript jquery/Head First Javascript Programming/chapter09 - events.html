@@ -6,10 +6,59 @@
 		window.onload = pageLoadedHandler; 
 		function pageLoadedHandler() {
 			alert("I'm alive!");
-		} 
+		}
+
+
+
+		window.onload = init;
+		function init() {
+			// var image = document.getElementById("zero");
+			// image.onclick = showAnswer;
+			var images = document.getElementsByTagName("img"); 
+			for (var i = 0; i < images.length; i++) {
+				images[i].onclick = showAnswer; 
+			}
+		}
+
+		function showAnswer(eventObj) { // eventObj could be anything you want
+			// var image = document.getElementById("zero");
+			// image.src = "chapter09/zero.jpg";
+			var image = eventObj.target;
+			var name = image.id; 
+			name = "chapter09/" + name + ".jpg"; 
+			image.src = name;
+
+			setTimeout(reblur, 2000, image); // sending the image variable/object to reblur
+		}
+
+		function reblur(image) {
+			var name = image.id; 
+			name = "chapter09/" + name + "blur.jpg"; 
+			image.src = name;
+		}
+
+
+
+		function timerHandler() {
+			console.log("Hey what are you doing just sitting there staring at a blank screen?");
+		}
+		function intervalHandler() {
+			console.log("One second");
+		}
+
+		setTimeout(timerHandler, 5000);
+		setInterval(intervalHandler, 1000);
+
+
+
 	</script>
 </head>
 <body>
+
+<img id="zero" src="chapter09/zeroblur.jpg">
+<img id="one" src="chapter09/oneblur.jpg">
+<img id="two" src="chapter09/twoblur.jpg">
+<img id="three" src="chapter09/threeblur.jpg">
 
 </body>
 </html>
