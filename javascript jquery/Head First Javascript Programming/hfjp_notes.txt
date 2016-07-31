@@ -81,3 +81,11 @@ page 476
 
 If we have to deal with these complexities then serveCustomer is quickly going to become a large function that is a lot more about managing drinks than serving customers, and when we design functions, a good rule of thumb is to have them do only one thing, but do it really well.
 pg491
+
+
+
+anonymous functions, scope
+pg515
+
+is it more complicated to use?
+pg520, pg522
