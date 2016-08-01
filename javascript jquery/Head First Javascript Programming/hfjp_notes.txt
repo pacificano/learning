@@ -89,3 +89,12 @@ pg515
 
 is it more complicated to use?
 pg520, pg522
+
+hoisting
+pg524
+
+lexical scope
+pg528
+
+closures
+pg535

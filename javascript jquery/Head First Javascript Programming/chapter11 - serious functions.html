@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter 11: Serious Functions</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var testAlert = console.log('so it is running...');
+
+	var functionTestAlert = function(){
+		console.log('even this is working...');
+	}
+
+	functionTestAlert();
+
+	function moreTest(){
+		console.log('this is working...');
+	}
+
+
+
+	var migrating = true;
+	var fly = function(num) { 
+	   var sound = "Flying";
+	   function wingFlapper() {
+	      console.log(sound);
+	   }
+	   for (var i = 0; i < num; i++) {
+	      wingFlapper();
+	   }
+	   var googleFlapper = console.log('whats this do?');
+	   
+	   var goobFlapper = function() {
+	   		console.log('goobFlapper called');
+	   }
+	   goobFlapper();
+	};
+	function quack(num) { 
+	   var sound = "Quack";
+	   var quacker = function() {
+	      console.log(sound);
+	   };
+	   for (var i = 0; i < num; i++) {
+	      quacker();
+	   }
+	}
+	if (migrating) {
+	    quack(4);
+	    fly(4);
+	}
+
+
+
+	// closures
+	var justAVar = "Oh, don't you worry about it, I'm GLOBAL";
+	function whereAreYou() {
+		var justAVar = "Just an every day LOCAL";
+		function inner() {
+			return justAVar;
+		}
+		return inner;
+	}
+	var innerFunction = whereAreYou();
+	var result = innerFunction();
+	console.log(result);
+	
+
+</script>
+
+</body>
+</html>
