@@ -98,3 +98,11 @@ pg528
 
 closures
 pg535
+
+You create a closure whenever you have a reference to a function that has free variables, and that function is executed outside of the context in which it was created.
+Another way we can create a closure is to pass a function to a function. 
+pg541
+
+= good explanation https://www.youtube.com/watch?v=yiEeiMN2Khs
+= even better https://www.youtube.com/watch?v=iSlSxDNarDY
+	- window.varName will give you global scope
