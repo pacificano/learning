@@ -106,3 +106,11 @@ pg541
 = good explanation https://www.youtube.com/watch?v=yiEeiMN2Khs
 = even better https://www.youtube.com/watch?v=iSlSxDNarDY
 	- window.varName will give you global scope
+
+
+
+constructor names start with a Capital Letter
+pg 572
+
+instanceof
+pg 583
