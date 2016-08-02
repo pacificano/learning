@@ -114,3 +114,8 @@ pg 572
 
 instanceof
 pg 583
+
+
+
+prototypal inheritence
+pg 609
