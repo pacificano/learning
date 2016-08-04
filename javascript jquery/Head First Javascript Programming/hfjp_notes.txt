@@ -119,3 +119,11 @@ pg 583
 
 prototypal inheritence
 pg 609
+
+prototypes = functions/properties that can be shared by objects
+
+hasOwnProperty
+p626
+
+chaining prototypes
+p635
