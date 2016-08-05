@@ -127,3 +127,15 @@ p626
 
 chaining prototypes
 p635
+
+setting prototype constructor value
+p642
+
+.call method
+p643
+
+
+
+recursion
+p674
+
