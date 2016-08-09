@@ -1,0 +1,2 @@
+- the first couple of chapters really are boring
+- go over the basics of html, css, and javascript
