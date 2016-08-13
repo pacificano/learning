@@ -1,2 +1,8 @@
 - the first couple of chapters really are boring
 - go over the basics of html, css, and javascript
+
+- examples in ch5 dont work
+- googlemaps api has changed?
+
+- chapter 6, ajax, xmlhttprequests and json
+- good stuff
