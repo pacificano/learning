@@ -1,3 +1,7 @@
+
+
+
+
 global versus local variables
 not declaring them will make them global
 
@@ -51,6 +55,22 @@ pg 375
 
 
 === this book has a lot more fluff and i mean thats its whole schtick, being a bit more light hearted and 'fun' than typical workbooks. but it does make you sometimes want them to cut to the chase. where it does excel i think is setting up and explaining object oriented programming. while the other book had great descriptions on objects themselves, this one goes into the thought process behind OOP and introduces the MVC model view controller concept very well.
+
+once it does get going it is actually a great book on javascript programming. about half way through it really picks up speed and fills in a lot of the deeper programming knowledge that the previous book just lightly touches. it really tries to get you to stop thinking as a scripter and start thinking as an object oriented programmer.
+
+it explains the model view controller concept which was something i had heard of but was not 100% familiar with. the model holds the state of things, ie their values and what not. the view updates the display, ie what people see. and the controller handles input.
+
+it explains verbosity and chaining (ie cutting down the amount of code you use and using chaining to put together references with less code); truthy and falsey (everything returns true except for undefined, null, 0, an empty string, and NaN).
+
+they go into describing how OOP javascript is written to react to events. and how to write handle functions and pass events to them. it explains the difference between function declarations (defines a function without setting it as a variable) and function expressions (ie var a = function(){} ...etc ). the idea of making each function only do one specific thing. 
+
+anonymous functions (ie var today = function() {return new Date()})
+
+scope (ie local vs global values), lexical scope (ie how variables are resolved in nested functions. basically, inner levels can access outer levels), hoisting (how javascript moves all variable and functions to the top of the current scope)
+
+== closures. ok so these are still... pretty confusing for me. i think they are how to pass values up from inner nested functions to their parents by 'returning' things.
+
+prototypal inheritence and prototypes in general. these were covered in the previous books. 
 
 
 
