@@ -6,3 +6,4 @@
 
 - chapter 6, ajax, xmlhttprequests and json
 - good stuff
+xmlhttprequests are good for getting files on your own server but they wont work cross server because of security issues

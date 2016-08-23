@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js test</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	// global scope vs local scope
+	// inner function can access outer function variables
+
+	function myFun(){
+		meMe = 'trey';
+		// alert("hello");
+		var bilLe = function(){
+			alert(meMe);
+		}
+
+		bilLe();
+	}
+
+	var meMe = 'billy';
+
+	// alert(meMe);
+
+
+
+
+</script>
+
+</body>
+</html>

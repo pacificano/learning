@@ -53,24 +53,31 @@ that we can test each object to make sure it’s doing its job correctly.
 
 pg 375
 
+The Head First series of books aim to make learning fun by adding more light hearted things like jokes and funny pictures to their stuff so you dont get completely bored by some very rigid and dry textbook. Head First Javascript Programming is their intermediate Javascript book.
 
-=== this book has a lot more fluff and i mean thats its whole schtick, being a bit more light hearted and 'fun' than typical workbooks. but it does make you sometimes want them to cut to the chase. where it does excel i think is setting up and explaining object oriented programming. while the other book had great descriptions on objects themselves, this one goes into the thought process behind OOP and introduces the MVC model view controller concept very well.
+At first glace it would seem like this book has a lot more fluff compared to something like A Smarter Way To Learn Javascript (ASWTLJ) and I mean thats its whole schtick, but it does make you sometimes want them to cut to the chase. Where it does excel I think is setting up and explaining object oriented programming (OOP). While ASWTLJ had great descriptions on objects themselves, this one goes into the thought process behind OOP and introduces the Model View Controller (MVC) concept very well.
 
-once it does get going it is actually a great book on javascript programming. about half way through it really picks up speed and fills in a lot of the deeper programming knowledge that the previous book just lightly touches. it really tries to get you to stop thinking as a scripter and start thinking as an object oriented programmer.
+And once it does get going it is actually a really great book on Javascript programming. About half way through it really picks up speed and fills in a lot of the deeper programming knowledge that the ASWTLJ just lightly touches. It really tries to get you to stop thinking as a scripter and start thinking as an object oriented programmer.
 
-it explains the model view controller concept which was something i had heard of but was not 100% familiar with. the model holds the state of things, ie their values and what not. the view updates the display, ie what people see. and the controller handles input.
+It explains the model view controller concept which was something I had heard of but was not 100% familiar with. The model holds the state of things, ie their values and what not. The view updates the display, ie what people see. And the controller handles input.
 
-it explains verbosity and chaining (ie cutting down the amount of code you use and using chaining to put together references with less code); truthy and falsey (everything returns true except for undefined, null, 0, an empty string, and NaN).
+It explains verbosity and chaining (ie cutting down the amount of code you use and using chaining to put together references with less code); truthy and falsey (everything returns true except for undefined, null, 0, an empty string, and NaN); and goes into describing how OOP Javascript is written to react to events and how to write handle functions and pass events to them. It explains the difference between function declarations (defines a function without setting it as a variable) and function expressions (ie var a = function(){} ...etc ). And preaches the idea of making each function only do one specific thing. 
 
-they go into describing how OOP javascript is written to react to events. and how to write handle functions and pass events to them. it explains the difference between function declarations (defines a function without setting it as a variable) and function expressions (ie var a = function(){} ...etc ). the idea of making each function only do one specific thing. 
+There is a lot of discussion on scope (ie local vs global values), lexical scope (ie how variables are resolved in nested functions. Basically, inner levels can access outer levels), and hoisting (how Javascript moves all variable and functions to the top of the current scope).
 
-anonymous functions (ie var today = function() {return new Date()})
+The trickiest part for me, and from what I gather a lot of other developers, was getting my head around the concept of closures. Closures are just functions that have an inner reference to a local variable that allows you to access it after the variable has fallen out of scope.
 
-scope (ie local vs global values), lexical scope (ie how variables are resolved in nested functions. basically, inner levels can access outer levels), hoisting (how javascript moves all variable and functions to the top of the current scope)
+I actually found a great video which describes them succintly. 
 
-== closures. ok so these are still... pretty confusing for me. i think they are how to pass values up from inner nested functions to their parents by 'returning' things.
+"A JavaScript closure is a function that has a pointer reference to a free variable. A free variable is one that has fallen out of scope after its parent function has returned. However, if that outer function still has some reference to the free var (normally through a function that gets returned, or through a method property), the variable will not get garbage collected because it will have a non-zero reference count. Thus, from outside the function, we can still access the inner variable by means of the closure."
+https://www.youtube.com/watch?v=b2AcxL88DoI
 
-prototypal inheritence and prototypes in general. these were covered in the previous books. 
+Overall, this is a great book to take your javascript skills from beginner to intermediate. The introduction of object oriented programming concepts was very easy to understand and really eye opening. I highly recommend this book.
+
+[pacTxt]<a href="https://github.com/pacificano/learning/tree/master/javascript%20jquery/A%20Smarter%20Way%20To%20Learn/Objects">You can see my code notes for A Smarter Way To Learn Javascript here.</a>
+[/pacTxt]
+
+
 
 
 
