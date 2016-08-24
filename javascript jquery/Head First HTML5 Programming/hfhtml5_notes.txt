@@ -10,3 +10,9 @@ xmlhttprequests are good for getting files on your own server but they wont work
 
 jsonp = using the script feature to load a json file from a different server using ?callback= to send the information retreived to a function
 pg294
+
+xmlhyyprequests vs jsonp
+pg296
+
+web services = apis
+pg296
