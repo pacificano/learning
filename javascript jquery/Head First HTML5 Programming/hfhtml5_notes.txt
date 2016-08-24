@@ -1,3 +1,6 @@
+== go over bullet points
+
+
 - the first couple of chapters really are boring
 - go over the basics of html, css, and javascript
 
@@ -16,3 +19,6 @@ pg296
 
 web services = apis
 pg296
+
+
+
