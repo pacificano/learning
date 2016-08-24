@@ -1,4 +1,6 @@
 == go over bullet points
+== download raw files and add to learning folders (both for html5 and javascript programming)
+
 
 
 - the first couple of chapters really are boring
