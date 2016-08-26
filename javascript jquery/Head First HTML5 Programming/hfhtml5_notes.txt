@@ -25,3 +25,9 @@ pg296
 canvas api
 pg374
 
+the video api
+pg440
+- this whole chapter while interesting, seems somewhat pointless with all the caveats surrounding the technology and how supported it is
+
+decent project ideas
+pg443
