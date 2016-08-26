@@ -5,6 +5,9 @@ window.onload = init;
 
 function init() {
 
+	var clearButton = document.getElementById("clear_button");
+	clearButton.onclick = clearStorage;
+
 	var button = document.getElementById("add_button"); 
 	button.onclick = createSticky;
 
@@ -36,4 +39,25 @@ function createSticky() {
 	var key = "sticky_" + localStorage.length; 
 	localStorage.setItem(key, value);
 	addStickyToDOM(value); 
+}
+
+
+
+function clearStorage() { 
+	localStorage.clear();
+} 
+
+
+
+function getStickiesarray() {
+	var stickiesarray = localStorage.getItem("stickiesarray"); 
+	
+	if (!stickiesarray) {
+		stickiesarray = [];
+		localStorage.setItem("stickiesarray", JSON.stringify(stickiesarray)); 
+	} else {
+	stickiesarray = JSON.parse(stickiesarray); 
+	}
+	
+	return stickiesarray; 
 }
