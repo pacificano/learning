@@ -36,3 +36,6 @@ can store arrays in localstorage by converting them to strings and back
 pg478, pg490
 
 good localstorage project ideas pg498
+
+
+chapter 10 web workers pg510
