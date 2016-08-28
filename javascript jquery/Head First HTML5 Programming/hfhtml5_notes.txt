@@ -31,3 +31,8 @@ pg440
 
 decent project ideas
 pg443
+
+can store arrays in localstorage by converting them to strings and back
+pg478, pg490
+
+good localstorage project ideas pg498

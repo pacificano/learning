@@ -15,5 +15,20 @@
 <ul id="stickies">
 </ul>
 
+<script type="text/javascript">
+	var dogFace = {
+		hair: "blonde",
+		legs: 4
+	}
+
+	var dogString = JSON.stringify(dogFace);
+
+	var dogParsed = JSON.parse(dogString);
+
+	alert(dogFace.legs);
+	alert(dogString);
+	alert(dogParsed.hair);
+</script>
+
 </body>
 </html>
