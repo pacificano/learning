@@ -39,3 +39,6 @@ good localstorage project ideas pg498
 
 
 chapter 10 web workers pg510
+js is single threaded. we can send off some work to be done with web workers
+
+https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
