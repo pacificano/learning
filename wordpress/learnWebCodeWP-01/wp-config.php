@@ -22,7 +22,7 @@ define('DB_NAME', 'learnWebCode');
 define('DB_USER', 'learnWebCode');
 
 /** MySQL database password */
-define('DB_PASSWORD', '!WpPactings26');
+define('DB_PASSWORD', 'myregularformatwithPactings');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
