@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Playwire</title>
+</head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<body>
+
+<input type="" name=""><button>+</button>
+<p>Download link</p>
+
+<script type="text/javascript">
+// grab value from input
+
+var $input = $('input');
+var $button = $('button');
+var inputVal;
+
+// on click
+$button.on('click', function(){ // make one for enter hit on keyboard
+
+	checkValidInput();
+	
+});
+
+// on enter
+$input.on('keypress', function(event){
+	if (event.keyCode === 13) {
+
+		checkValidInput();
+
+	}
+});
+
+var checkValidInput = function(){
+	inputVal = $input.val();
+	console.log('inputval is: ' + inputVal);
+
+	if (inputVal.indexOf('config.playwire.com') > 0) {
+		console.log('correct link');
+		changeUrl();
+	} else if (inputVal === '') {
+		console.log('empty input');
+	} else {
+		console.log('not a playwire link');
+	}
+};
+
+var playwireLink = 'http://config.playwire.com/21772/videos/v2/5144726/zeus.json';
+
+// grab 21772
+
+var firstVal = playwireLink.substring(27, 32);
+console.log(firstVal);
+
+// grab 5144726
+
+var secondVal = playwireLink.substring(43, 50); // is the second value always 7 character? maybe use indexOf to find the zeus.json and videos/v2/ and work backwards from there?
+console.log(secondVal);
+
+// put into https://cdn.video.playwire.com/ + firstVal + /videos/ + secondVal + video-sd.mp4
+
+var compiledUrl = 'https://cdn.video.playwire.com/' + firstVal + '/videos/' + secondVal + '/video-sd.mp4';
+console.log(compiledUrl);
+
+// replace p.val with new link
+
+var $replaceP = $('p');
+$replaceP.html('<a href="' + compiledUrl + '">Download</a>');
+
+
+</script>
+
+<!-- INCLUDE JQUERY -->
+
+</body>
+</html>
