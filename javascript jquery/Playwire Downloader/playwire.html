@@ -11,6 +11,12 @@
 
 <script type="text/javascript">
 
+// https://cdn.video.playwire.com/21772/videos/5144726/video-mobile.mp4
+// https://cdn.video.playwire.com/21772/videos/5144726/video-sd.mp4
+// http://config.playwire.com/21772/videos/v2/5144726/zeus.json
+
+// config.playwire.com/21772/videos/v2/5144726/zeus.json
+
 var main = function(){
 
 	// variables
@@ -43,8 +49,10 @@ var main = function(){
 		var inputIndex = inputVal.indexOf('config.playwire.com');	
 
 		if (inputIndex >= 0) {
-			playwireLink = inputVal;
-			changeUrl(inputIndex);
+			// add http if needed
+			addHttpToLink(inputIndex, inputVal);
+			// playwireLink = inputVal;
+			// changeUrl(inputIndex);
 		} else if (inputVal === '') {
 			$replaceP.html('empty input');
 		} else {
@@ -68,6 +76,28 @@ var main = function(){
 		var compiledUrl = 'https://cdn.video.playwire.com/' + firstVal + '/videos/' + secondVal + '/video-sd.mp4';
 		
 		$replaceP.html('<a href="' + compiledUrl + '">Download</a>');
+
+	};
+
+
+	// parse the json
+	var parseJson = function(playwireLink){
+		$.getJSON(playwireLink, function(result){
+			// console.log(result);
+			console.log(result.settings.title);
+			var playwireTitle = result.settings.title;
+			console.log(result.publisherId);
+			var playwirePublisher = result.publisherId
+			console.log(result.content.videoId);
+			var playwireVideo = result.content.videoId
+		});
+	};
+
+
+	// add http to playwireLink2
+	var addHttpToLink = function(inputIndex, inputVal){
+		var playwireLink = 'http://' + inputVal.substring(inputIndex);
+		parseJson(playwireLink);
 
 	};
 
