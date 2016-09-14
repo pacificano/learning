@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grabbing JSON</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	// the url config.playwire.com/21772/videos/v2/5144726/zeus.json
+	// parse with http://json.parser.online.fr/
+
+	$.getJSON('http://config.playwire.com/21772/videos/v2/5144726/zeus.json', function(result){
+		// console.log(result);
+		console.log(result.settings.title);
+		console.log(result.publisherId);
+		console.log(result.content.videoId);
+	});
+</script>
+
+</body>
+</html>
