@@ -41,7 +41,7 @@ var main = function(){
 		
 		inputVal = $input.val();
 
-		if (inputVal.indexOf('config.playwire.com') > 0) {
+		if (inputVal.indexOf('config.playwire.com') >= 0) {
 			playwireLink = inputVal;
 			changeUrl();
 		} else if (inputVal === '') {
