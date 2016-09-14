@@ -11,21 +11,12 @@
 
 <script type="text/javascript">
 
-// https://cdn.video.playwire.com/21772/videos/5144726/video-mobile.mp4
-// https://cdn.video.playwire.com/21772/videos/5144726/video-sd.mp4
-// http://config.playwire.com/21772/videos/v2/5144726/zeus.json
-
-// config.playwire.com/21772/videos/v2/5144726/zeus.json
-
 var main = function(){
 
 	// variables
 	var $input = $('input'), 
-		$button = $('button'), 
+		$button = $('button'),
 		$replaceP = $('p');
-
-	var inputVal, 
-		playwireLink;
 
 
 	// on click event
@@ -45,14 +36,12 @@ var main = function(){
 	// check for valid input
 	var checkValidInput = function(){
 		
-		inputVal = $input.val();
+		var inputVal = $input.val();
 		var inputIndex = inputVal.indexOf('config.playwire.com');	
 
 		if (inputIndex >= 0) {
 			// add http if needed
 			addHttpToLink(inputIndex, inputVal);
-			// playwireLink = inputVal;
-			// changeUrl(inputIndex);
 		} else if (inputVal === '') {
 			$replaceP.html('empty input');
 		} else {
@@ -62,57 +51,46 @@ var main = function(){
 	};
 
 
-	// change the url into downloadable version
-	var changeUrl = function(inputIndex){
 
-		// grab first value
-		var firstVal = playwireLink.substring(inputIndex + 20, inputIndex + 25);
-
-		// grab the second value
-		var secondVal = playwireLink.substring(inputIndex + 36, inputIndex + 43); 
-		// NOTE: is the second value always 7 character? maybe use indexOf to find the zeus.json and videos/v2/ and work backwards from there?
-
-		// compile values into URL
-		var compiledUrl = 'https://cdn.video.playwire.com/' + firstVal + '/videos/' + secondVal + '/video-sd.mp4';
-		
-		$replaceP.html('<a href="' + compiledUrl + '">Download</a>');
-
+	// add http to playwireLink
+	var addHttpToLink = function(inputIndex, inputVal){
+		var playwireLink = 'http://' + inputVal.substring(inputIndex);
+		parseJson(playwireLink);
 	};
+
 
 
 	// parse the json
 	var parseJson = function(playwireLink){
 		$.getJSON(playwireLink, function(result){
-			// console.log(result);
-			console.log(result.settings.title);
+
+			// get video title
 			var playwireTitle = result.settings.title;
-			console.log(result.publisherId);
+
+			// get the publisher
 			var playwirePublisher = result.publisherId
-			console.log(result.content.videoId);
+
+			// get the video id
 			var playwireVideo = result.content.videoId
 
-			makeUrl(playwirePublisher, playwireVideo);
+			makeUrl(playwirePublisher, playwireVideo, playwireTitle);
 
 		});
 	};
 
 
-	// add http to playwireLink2
-	var addHttpToLink = function(inputIndex, inputVal){
-		var playwireLink = 'http://' + inputVal.substring(inputIndex);
-		parseJson(playwireLink);
-
-	};
 
 	// make the url
-	var makeUrl = function(playwirePublisher, playwireVideo){
+	var makeUrl = function(playwirePublisher, playwireVideo, playwireTitle){
 		var compiledUrl = 'https://cdn.video.playwire.com/' + playwirePublisher + '/videos/' + playwireVideo + '/video-sd.mp4';
-		replaceP(compiledUrl);
+		replaceP(compiledUrl, playwireTitle);
 	};
 
-	// replace the p tag
-	var replaceP = function(compiledUrl){
-		$('p').html('<a href="' + compiledUrl + '">Download</a>');
+
+
+	// replace the p tag with the final link
+	var replaceP = function(compiledUrl, playwireTitle){
+		$replaceP.html('<a href="' + compiledUrl + '" download="' + playwireTitle + '">Download ' + playwireTitle + '</a>');
 	};
 
 };
