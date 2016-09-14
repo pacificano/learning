@@ -90,6 +90,9 @@ var main = function(){
 			var playwirePublisher = result.publisherId
 			console.log(result.content.videoId);
 			var playwireVideo = result.content.videoId
+
+			makeUrl(playwirePublisher, playwireVideo);
+
 		});
 	};
 
@@ -99,6 +102,17 @@ var main = function(){
 		var playwireLink = 'http://' + inputVal.substring(inputIndex);
 		parseJson(playwireLink);
 
+	};
+
+	// make the url
+	var makeUrl = function(playwirePublisher, playwireVideo){
+		var compiledUrl = 'https://cdn.video.playwire.com/' + playwirePublisher + '/videos/' + playwireVideo + '/video-sd.mp4';
+		replaceP(compiledUrl);
+	};
+
+	// replace the p tag
+	var replaceP = function(compiledUrl){
+		$('p').html('<a href="' + compiledUrl + '">Download</a>');
 	};
 
 };
