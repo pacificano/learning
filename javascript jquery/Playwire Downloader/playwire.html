@@ -40,10 +40,11 @@ var main = function(){
 	var checkValidInput = function(){
 		
 		inputVal = $input.val();
+		var inputIndex = inputVal.indexOf('config.playwire.com');	
 
-		if (inputVal.indexOf('config.playwire.com') >= 0) {
+		if (inputIndex >= 0) {
 			playwireLink = inputVal;
-			changeUrl();
+			changeUrl(inputIndex);
 		} else if (inputVal === '') {
 			$replaceP.html('empty input');
 		} else {
@@ -54,13 +55,13 @@ var main = function(){
 
 
 	// change the url into downloadable version
-	var changeUrl = function(){
+	var changeUrl = function(inputIndex){
 
 		// grab first value
-		var firstVal = playwireLink.substring(27, 32);
+		var firstVal = playwireLink.substring(inputIndex + 20, inputIndex + 25);
 
 		// grab the second value
-		var secondVal = playwireLink.substring(43, 50); 
+		var secondVal = playwireLink.substring(inputIndex + 36, inputIndex + 43); 
 		// NOTE: is the second value always 7 character? maybe use indexOf to find the zeus.json and videos/v2/ and work backwards from there?
 
 		// compile values into URL
