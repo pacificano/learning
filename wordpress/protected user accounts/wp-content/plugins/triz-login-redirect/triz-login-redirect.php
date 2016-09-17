@@ -14,6 +14,7 @@ add_action( 'wp', 'my_login_redirect' );
 function my_login_redirect() {
 	if ( (is_single()) && (!is_user_logged_in()) ) {
 		$myCurrentUrl = get_the_ID();
-		wp_safe_redirect( '/wp-login.php?from=' . $myCurrentUrl );
+		// wp_safe_redirect( '/wp-login.php?from=' . $myCurrentUrl );
+		wp_safe_redirect( plugin_dir_url( __FILE__ ) . 'triz-login.php?from=' . $myCurrentUrl );
 	}
 }
