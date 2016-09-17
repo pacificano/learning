@@ -7,16 +7,12 @@
  * @since Twenty Sixteen 1.0
  */
 
-if ( !is_user_logged_in() ) {
-	wp_redirect( '/wp-login.php' );
-}
+// THIS WORKS
+// if ( (is_single()) && (!is_user_logged_in()) ) {
+// 	wp_safe_redirect( '/wp-login.php' );
+// }
 
 get_header(); 
-
-// if ( !is_user_logged_in() ) {
-// 	wp_redirect( 'http://localhost:8888/wp-login.php' ); 
-// 	exit;
-// }
 
 ?>
 
