@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Map function</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var nums = [1, 2, 3, 4, 5];
+
+	var squares = nums.map(function (num) {
+		return num * num; }
+	);
+
+	console.log(squares);
+
+
+
+	var names = [ "emily", "mark", "bruce", "andrea", "pablo" ];
+
+	var capitalizedNames = names.map(function (name) {
+		var firstLetter = name[0];
+		return firstLetter.toUpperCase() + name.substring(1);
+	});
+
+	console.log(capitalizedNames);
+</script>
+</body>
+</html>
