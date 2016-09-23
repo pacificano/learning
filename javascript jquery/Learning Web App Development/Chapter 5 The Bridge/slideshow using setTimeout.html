@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>slideshow</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+
+<div class="message"></div>
+
+<script type="text/javascript">
+	
+	var main = function(){
+		var messages = ["first message", "second message", "third", "fourth"];
+		
+		var displayMessage = function (messageIndex){
+			if (messageIndex === 4) {
+				messageIndex = 0;
+			}
+			// var $message = $("<p>").text(messages[messageIndex]).hide();
+			var $message = $("<p>").text(messages[messageIndex]);
+			$(".message").hide();
+			$(".message").empty();
+			$(".message").append($message);
+			$(".message").fadeIn();
+
+			setTimeout(function(){
+				messageIndex = messageIndex + 1;
+				displayMessage(messageIndex);
+			}, 2000);
+		};
+
+		displayMessage(0);
+	};
+
+
+// 	var main = function(){
+// 		var messages = ["first message", "second message", "third", "fourth"];
+
+// 		var displayMessage = function (messageIndex) {
+// // create and hide the DOM element
+// 			var $message = $("<p>").text(messages[messageIndex]).hide();
+// $(".message").empty();
+// $(".message").append($message);
+// $message.fadeIn();
+
+// setTimeout(function () {
+// messageIndex = messageIndex + 1; 
+// displayMessage(messageIndex);
+// }, 3000);
+
+
+// 	};};
+
+	$(document).ready(main);
+	
+</script>
+
+</body>
+</html>
