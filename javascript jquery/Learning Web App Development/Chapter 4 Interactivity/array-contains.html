@@ -44,13 +44,20 @@
 
 	var arrayContainsNTimes = function(theArray, letterToCheck, howManyTimes){
 		var letterCount = 0;
+		var arrayPosition = 0;
 
 		theArray.forEach(function(theLetter){
 			if (theLetter === letterToCheck) {
 				letterCount++;
 				if (letterCount === howManyTimes) {
-					console.log('there are ' + letterCount + ' ' + letterToCheck + '\'s');
+					console.log('true');
+					return true;
 				}
+			}
+			arrayPosition++;
+			if (arrayPosition === theArray.length) {
+				console.log('false');
+				return false;
 			}
 		});
 	};

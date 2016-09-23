@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Poker Hand Sorter</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+	var hand = [
+		{ "rank":"two", "suit":"spades" },
+		{ "rank":"four", "suit":"hearts" }, 
+		{ "rank":"two", "suit":"clubs" },
+		{ "rank":"king", "suit":"spades" }, 
+		{ "rank":"eight", "suit":"diamonds" }
+	];
+
+	var handRanks, 
+		result;
+
+	handRanks = hand.map(function (card) { 
+		return card.rank;
+	});
+
+	var arrayContainsNTimes = function(theArray, letterToCheck, howManyTimes){
+		var letterCount = 0;
+		var arrayPosition = 0;
+
+		theArray.forEach(function(theLetter){
+			if (theLetter === letterToCheck) {
+				letterCount++;
+				if (letterCount === howManyTimes) {
+					console.log('true');
+					return true;
+				}
+			}
+			arrayPosition++;
+			if (arrayPosition === theArray.length) {
+				console.log('false');
+				return false;
+			}
+		});
+	};
+
+	result = arrayContainsNTimes(handRanks, "two", 2);
+
+</script>
+</body>
+</html>
