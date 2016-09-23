@@ -10,8 +10,6 @@
 	
 	var arrayContains = function(theArray, wordToCheck){
 
-
-		// theArray.forEach(function(theWord, wordToCheck){
 		theArray.forEach(function(theWord){
 			if (theWord === wordToCheck) {
 				console.log(theWord + ' is equal to ' + wordToCheck);
@@ -19,9 +17,45 @@
 				console.log(theWord + ' does not equal ' + wordToCheck);
 			}
 		});
+
 	};
 
 	arrayContains(["hello", "world"], "hello");
+
+
+
+	var arrayContainsTwo = function(theArray, letterToCheck){
+		var letterCount = 0;
+
+		theArray.forEach(function(theLetter){
+			if (theLetter === letterToCheck) {
+				letterCount++;
+				if (letterCount === 2) {
+					console.log('there are ' + letterCount + ' ' + letterToCheck + '\'s');
+				}
+			}
+		});
+
+	};
+
+	arrayContainsTwo(["a","b","a","c"], "a");
+
+
+
+	var arrayContainsNTimes = function(theArray, letterToCheck, howManyTimes){
+		var letterCount = 0;
+
+		theArray.forEach(function(theLetter){
+			if (theLetter === letterToCheck) {
+				letterCount++;
+				if (letterCount === howManyTimes) {
+					console.log('there are ' + letterCount + ' ' + letterToCheck + '\'s');
+				}
+			}
+		});
+	};
+
+	arrayContainsNTimes(["a","b","a","c","a"], "a", 3);
 </script>
 </body>
 </html>
