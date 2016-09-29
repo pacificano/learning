@@ -1,0 +1,249 @@
+How To Setup A Node Development Environment On MacOS
+
+So I wanted to set up a virtualbox for creating development environments for certain projects. I'm learning node.js at the moment and thought what better way to start than just quickly spin up a virtual node server. Well, holy crap. It was a lot more difficult than I thought it would be. I've spent ages trying to get it working right. Using numerous guides/puhpet/etc. I've finally got it working now and have written out my steps for other people. Say what you will though but setting up a PHP server is soooooo much easier. Anyways, hopefully now that I know how to quickly setup a node server, doing other servers wont be so hard.
+
+
+
+Doomsday Prepping
+
+Ok, so this guide is explicitly for MacOS and just node. We'll be running a copy of Ubuntu through VirtualBox.
+
+What you want to do is install iTerm. This will be our terminal.
+You'll want to install Sublime Text. Obviously our text editor.
+Then you'll want to install VirtualBox. This will run our server operating system.
+Then you'll want to install Vagrant. Vagrant is an app that you run through the terminal to handle installing/running virtual machines.
+
+
+
+Say hello to the terminal
+
+Open iTerm. We are going to change directory to the place we want to install everything. Type 'cd' and a space and then drag from the finder => into iTerm and you'll see the folder path copy/pasted in. Press 'return'. Type 'ls' to see the folder contents. If you get lost you can type 'pwd' (print working directory) to see where you are.
+
+
+
+Initialising Vagrant
+
+Next, we'll initialise Vagrant to download our copy of Ubuntu. You can find a list of boxes to download here [https://atlas.hashicorp.com/boxes/search?utf8=%E2%9C%93&sort=&provider=virtualbox&q=ubuntu]. We'll be using Ubuntu 12. So we can find a copy of it here [https://atlas.hashicorp.com/hashicorp/boxes/precise64/versions/1.1.0]
+
+You can see the two lines of code we'll need to initialise vagrant with. Making sure you are in the folder, you want to set everything up in, type 'vagrant init hashicorp/precise64'. It will create a Vagrantfile in your folder. This is basically the preference file for your virtual machine. Next type 'vagrant up --provider virtualbox'. It will start downloading Ubuntu from the server. It will then install the server and make sure its up to date. And then boot up the virtual machine. 
+
+Just a quick word on Vagrant and your virtual machine:
+
+'vagrant up' is the command to start the virtual machine
+'vagrant suspend' will pause the virtual machine
+'vagrant halt' will shutdown the virtual machine like a normal computer
+
+
+
+Connecting to our virtual machine
+
+Once it has booted up, it will send you back to the command line. You then want to connect to your virtual machine. You do this with ssh. What I would do is create a new tab in iTerm. Because you are currently using terminal on your MacOS machine, it can get confusing to know where you are when you log into terminal on your virtual Ubuntu machine. So have one window for your MacOS (the host machine) and one for your Ubuntu virtualisation (the guest machine). 
+
+Again 'cd' and drag the folder from finder to make sure you are in the right spot (hint: you need to be in the directory with the Vagrantfile file). The virtual machine should be up and running already but just in case type 'vagrant up'. Now to connect to the machine just type 'vagrant ssh'. We'll get a welcome message. If you ever want to quit out of the ssh session, just hit 'control-d'. 
+
+
+
+Folder Sharing
+
+Vagrant by default will share a folder from Finder with the virtual machine. The folder that it shares from the Finder is the same folder we have our Vagrantfile in. 
+
+When we log into the virtual machine it will put us in a directory that isnt the shared one. Type 'pwd' to see where you currently are logged in. We should be in a folder called '/home/vagrant'. The folder we want is '/vagrant'. 
+
+Back in the Finder, create a folder in the Vagrantfile folder called 'testFolder'. Just do this so we can see when we are actually in the shared folder in Ubuntu.  
+
+Switch back to iTerm. We're currently in '/home/vagrant'. To go up a directory, you type 'cd ..'. Type 'pwd'. We're now in '/home'. Type 'cd ..' again. Type 'ls' and you should see a bunch of folder names. In the bottom right, you should see a 'vagrant' folder. Type 'cd vagrant' to change to it. Type 'ls' and HOPEFULLY you see 'testFolder' and 'Vagrantfile'. 
+
+So now you know where the shared folder is.
+
+
+
+Setting default login directory
+
+Having to change to the shared folder manually each time is a pain in the ass. So what we're going to do now is edit our preferences to automatically change to '/vagrant' on login. Type 'pwd'. We should still be in '/vagrant'. If you get lost you can type 'cd ~' to take us back to the original login folder '/home/vagrant'. Either way, 'cd ..' till you get to the '/' with all the folders (where we changed directory into=> the vagrant shared folder).
+
+When you get there type 'ls'. You should see an 'etc' folder. 'cd etc' into it. 'ls'. There should be a 'bash.bashrc' file. This is the preferences for our terminal. Type 'sudo nano bash.bashrc'. What this does is open 'bash.bashrc' file with 'nano' our text editor, using 'sudo' which is super administrator powers. You'll get a wall of text with some instructions key commands down the bottom. We've basically opened up the bash.bashrc file and are looking at a text editor. Scroll down by pressing the down key. 
+
+When you get to the bottom, type 'cd /vagrant'. We're just adding a command to the preferences to change directory to our shared folder on login. Hit 'control-x' to exit. Press 'y' to confirm overwrite. Hit 'return'. And the file is closed and saved. We can now quit out of the ssh session on the virtual machine with 'control-d'. 
+
+Type 'pwd'. You should see that you are currently back on the MacOS. Lets log back in to the virtual machine and see if the automatic login has worked. 'vagrant ssh'. 'ls'. Hopefully you see your 'testFolder'.
+
+
+
+Updating the server
+
+I'll just quickly show you how to install some essential files. We can use the Ubuntu package manager to install stuff for us. Its called 'Apitutude'. You can type that ('aptitude') into the command line to bring up a GUI of whats installed so far. Its confusing to be honest and I haven't totally got my head around. For know, just know that you can use the command line 'apt-get' to get stuff. You can type 'apt-get -h' to get help if you want. We're going to get a package called 'build-essential' first. So type 'sudo apt-get install -y build-essential'. Again, 'sudo' for admin priviledges. 'apt-get install' will install the 'build-essential' package. And the '-y' flag just mean you agree to accepting every installation question with a 'yes'. 
+
+'sudo apt-get install -y build-essential' will download and install a bunch of essential stuff. 
+
+
+
+Installing Node Version Manager
+
+Next we'll be installing NVM. This just an easy way to make sure you are using the most current version of node. We're going to download it from github. But first we need a program called 'curl' that will download stuff for us. Type 'sudo apt-get install -y curl'. Now that that is installed we can type 'curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash' to get NVM. There are more instructions here [https://github.com/creationix/nvm#installation]. 
+
+Once NVM has finished downloading, we'll have to logout and then back in again to have it wokring correctly. 'control-d' to logout. then 'vagrant ssh' to log back in. Now we can install the stable version of node with 'nvm install stable'. Node is now installed alongside its package manager, aptly named 'Node Package Manager'. We can use NPM to install node packages we need.
+
+
+
+Getting a webserver up and running with Node and Express.
+
+Ok, so now we have node installed. We need to install Express, which is a node framework for running web apps on the server. Its easy enough to do. We'll make a 'Express' directory in our 'Vagrant' folder. Either using Finder or typing 'mkdir express'. 'cd express. And now just type 'npm install express'. Express is now installed into '/vagrant/express'. 
+
+
+
+Opening up a port for Express/Node
+
+We are going to make a little javascript file that will run on our server and host files. We'll be serving the files through port 3000 so we need to add that to our Vagrant file. Press 'control-d' to logout of the virtual machine terminal. Then type 'vagrant halt' to shut down the virtual machine. Now back in the Finder, open up the 'Vagrantfile' file in Sublime Text. There will be a lot of commented out lines. You can read over these and see what options you can add. Find the line about 'Forwarded port mapping'. You can uncomment the line (with 'apple-key-/') 'config.vm.network "forwarded_port", guest: 80, host: 8080' and change BOTH ports to 3000. The line should now read 'config.vm.network "forwarded_port", guest: 3000, host: 3000'. Save the file. In the folder with 'Vagrantfile', open the 'Express' folder, and then make a new folder inside it called 'Client'. Put whatever HTML files you want to host inside it. Now go back into iTerm and type 'vagrant up' to start the virtual machien up again. Type 'vagrant ssh' to connect to the virtual machine terminal.
+
+
+
+Making a webserver with node and javascript
+
+Open up Sublime Text. Make a new file. Press 'apple-shift-p' to open the command palete. Type 'java' and select 'Set Syntax: Javascript'. We're going to make a Javascript file that initialises Express, imports some webserver code, and points it to our 'Client' folder. 
+
+Start off with: 'var express = require("express"), http = require("http"), app = express();'. This imports in Express. Adds its http module. And creates an 'app' out of it.
+
+We'll then add: 'app.use(express.static(__dirname + "/client"));'. Which points our app to the '/client' folder where we host our files. 
+
+We then type: 'http.createServer(app).listen(3000);'. Which creates a server using the http module listening on port 3000. The port we added to our 'Vagrantfile' file.
+
+Thats it.
+
+var express = require("express"), http = require("http"), app = express();
+app.use(express.static(__dirname + "/client"));
+http.createServer(app).listen(3000);
+
+Save this file in the 'Express' folder as 'server.js'.
+
+
+
+Testing our webserver
+
+Now all we have to do is go back into iTerm. Navigate to our 'express' folder. And type 'node server.js'. Now you can open up Chrome and go to 'localhost:3000' and your page should load! You can shut down the server by going back to iTerm and pressing 'control-c'. 'control-d' to log out of the virtual machine. Then 'vagrant halt' to shut it down. Its a good idea to close these virtual machines down as they are taxing on your host computers resources and also because you want to close down forwarded ports if youre not using them. You can type 'vagrant global-status' to see what virtual machines are currently running.
+
+
+
+
+List of steps
+
+1. Install iTerm, SublimeText, Vagrant, VirtualBox
+2. set up Vagrant with 'vagrant init hashicorp/precise64'
+3. run Vagrant with 'vagrant up --provider virtualbox'
+4. connect to virtual machine 'vagrant ssh'
+5. navigate to '/etc' and type 'sudo nano bash.bashrc'
+6. add 'cd /vagrant' to the end of the file and save it
+7. get the build essential files with 'sudo apt-get install -y build-essential'
+8. get curl with 'sudo apt-get install -y curl'
+9. download NVM with 'curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash' 
+10. install node and npm with 'nvm install stable'
+11. install Express with 'npm install express'
+12. open up our ports by adding 'config.vm.network "forwarded_port", guest: 3000, host: 3000' to our Vagrantfile
+13. wrote a webserver with javascript/express [link to github]
+14. ran server with 'node server.js'
+15. visited 'localhost:3000'
+
+
+
+List of commands used
+
+'cd'	change directory
+'ls'	list directory
+'pwd'	print the current directory
+
+'vagrant init hashicorp/precise64'	initialise vagrant to use precise64 (aka ubuntu 12)
+'vagrant up --provider virtualbox'	start up the virtual machine with vagrant
+'vagrant up'	start up the virtual machine
+'vagrant suspend'	pause the virtual machine
+'vagrant halt'	shutdown the virtual machine like a normal computer
+'vagrant ssh'	login to the virtual machine
+'control-d'	logout of virtual machine
+
+'sudo nano bash.bashrc'	open up bash.bashrc in nano
+'sudo'	use admin power
+'nano'	text editor
+
+'apt-get -h'	show help menu of aptitude
+'sudo apt-get install -y build-essential'	install build-essential package
+'apt-get'	ubuntu package manager
+'apt-get install -y <packageName>'	install a package with -y flagged (-y flag meaning that we agree to everything during installation)
+
+'sudo apt-get install -y curl'	install curl package
+'curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash'	install node version manager
+
+'mkdir express'	make a directory called express
+'npm install express'	use npm to install Express
+
+'config.vm.network "forwarded_port", guest: 3000, host: 3000'	added to our Vagrantfile to open up port 3000
+'node server.js'	uses node to run our javascript server
+
+
+
+List of resources used to figure this all out
+
+https://www.vagrantup.com/docs/cli/
+https://atlas.hashicorp.com/hashicorp/boxes/precise64/versions/1.1.0
+https://www.virtualbox.org
+https://www.vagrantup.com
+Github with the server.js
+
+
+
+Still to learn
+
+how to add 'build-essential', 'curl', 'nvm' to vagrantfile.
+
+
+
+
+
+
+ 
+- download iterm
+	- install brew
+	- install cask
+		- download sublime text
+		- download vagrant
+		- download virtualbox
+- go to puhpet and install mongodb, redis, apache, ubuntu trusty, nfs file system, vim, node 5
+- hit create archive and download and expand it on your computer
+- open iterm
+- create two panels (one for host, one for guest)
+- type cd and then drag the folder to the terminal
+- hit return
+- type vagrant up
+- sit back and let it all install
+- open second panel
+- vagrant ssh
+
+
+
+
+
+sudo apt-get install curl
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash
+	from https://github.com/creationix/nvm#installation
+nvm install stable
+npm install express
+
+
+
+vagrant init hashicorp/precise64
+vagrant up --provider virtualbox
+
+
+navigate up to root 
+cd .. 
+then 
+cd etc
+sudo nano bash.bashrc
+add line
+cd /vagrant
+save
+
+
+add config.vm.network "forwarded_port", guest: 3000, host: 3000
+
+
+put our server.js folder in
+
+run it with node server.js
