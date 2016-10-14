@@ -1,7 +1,5 @@
 <?php 
 
-$query = require 'bootstrap.php';
+$query = require 'core/bootstrap.php';
 
-$tasks = $query->selectAll('todo');
-
-require 'index.view.php';
+require 'controllers/index.php';
