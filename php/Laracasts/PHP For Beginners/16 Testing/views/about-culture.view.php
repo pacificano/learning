@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1>Our Culture</h1>
+<h1>Our Culture at <?= $name; ?></h1>
 
 </body>
 </html>
