@@ -1,5 +1,5 @@
 <?php 
 
-$tasks = $query->selectAll('todo');
+$tasks = $database->selectAll('todo');
 
 require 'views/index.view.php';
