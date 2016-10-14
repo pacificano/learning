@@ -1,5 +1,9 @@
 <?php 
 
-$query = require 'core/bootstrap.php';
+$database = require 'core/bootstrap.php';
 
-require 'controllers/index.php';
+$router = new Router;
+
+require 'routes.php';
+
+require $router->direct('contact');

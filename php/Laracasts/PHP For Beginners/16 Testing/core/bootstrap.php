@@ -1,8 +1,11 @@
 <?php 
 
+// paths are based from /index.php
 $config = require 'config.php';
-require 'database/connection.php';
-require 'database/queryBuilder.php';
+
+require 'core/router.php';
+require 'core/database/connection.php';
+require 'core/database/queryBuilder.php';
 
 
 
