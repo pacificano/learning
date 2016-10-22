@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VueJS To-Do</title>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+	<script src="todo.js"></script>
+	<link href="todo.css" rel="stylesheet">
+</head>
+<body>
+
+<p><a href="https://ayoisaiah.com/vuejs-todolist-app/">https://ayoisaiah.com/vuejs-todolist-app/</a></p>
+
+
+
+<div class="container" id="todo">
+	
+	<section class="panel">
+		<input id="mark-all" type="checkbox">
+		<input class="text-input" type="text" placeholder="What do you need to do?" autofocus>
+		<button>Clear List</button>		
+	</section>
+
+	<ul class="list">
+		<li>
+			<input class="checkbox" type="checkbox">
+			<input class="text-input" type="text">
+			<label for="checkbox"></label>
+			<button class="delete">X</button>
+		</li>
+	</ul>
+
+</div>
+
+
+<div id="demo">
+  <input type="text" v-model="name">
+  <br>
+  <!-- This stringifies the contents of the data object and displays it on the page -->
+  <pre>{{ $data }}</pre>
+</div>
+
+
+
+
+</body>
+</html>

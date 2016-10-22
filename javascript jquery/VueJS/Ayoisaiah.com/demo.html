@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo</title>
+	<script src="https://unpkg.com/vue@next/dist/vue.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+	new Vue({
+  el: "#demo",
+  data: {
+    name: "Ayo Isaiah"
+  }
+});
+</script>
+
+<div id="demo">
+  <input type="text" v-model="name">
+  <br>
+  <!-- This stringifies the contents of the data object and displays it on the page -->
+  <pre>{{ $data }}</pre>
+</div>
+
+</body>
+</html>
