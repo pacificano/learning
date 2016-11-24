@@ -8,6 +8,7 @@ export default class Header extends React.Component {
 		return(
 			<div>
 				<Title title={this.props.title} />
+				<input />
 			</div>
 			);
 	}
