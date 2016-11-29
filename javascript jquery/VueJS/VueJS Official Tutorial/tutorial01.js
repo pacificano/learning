@@ -40,6 +40,13 @@ var app = new Vue({
     	text: 'Dogs'
     },{
     	text: 'Hats for summer'
+    }],
+    cats: [{
+      breed: 'Burmese'
+    },{
+      breed: 'Tabby'
+    },{
+      breed: 'Siamese'
     }]
   }
 })
