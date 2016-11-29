@@ -8,6 +8,27 @@ Vue.component('custom-item',{
 	template: '<li>{{ todo.text }}</li>'
 })
 
+Vue.component('myDiv', {
+  template: '<div v-if="Math.random() > 0.5">Now you see me</div><div v-else>Now you dont</div>'
+})
+
+Vue.component('my-if', {
+  template: '<p>yoooooo</p>'
+})
+
+// DONT USE CAMELCASE. LOWERCASE WITH HYPHENS PLEASE
+Vue.component('myRandomText', {
+  template: '<h1>Here it is</h1>'
+})
+
+// EXAMPLE OF MULTILINE TEMPLATE
+Vue.component('list-example', {
+  template: 
+  '<ul>\
+    <li>one</li>\
+  </ul>'
+})
+
 // CREATE NEW VUE (has to come after the components)
 var app = new Vue({
   el: '#app',
@@ -23,6 +44,11 @@ var app = new Vue({
   }
 })
 
-
+var example = new Vue({
+  el: '#example',
+  data: {
+    message: 'Not working',
+  }
+})
 
 
