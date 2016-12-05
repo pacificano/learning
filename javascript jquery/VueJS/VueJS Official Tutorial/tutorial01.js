@@ -55,7 +55,36 @@ var example = new Vue({
   el: '#example',
   data: {
     message: 'Not working',
+    videoGame: {
+      name: 'Final Fantasy 15',
+      genre: 'RPG',
+      rating: '9/10'
+    }
   }
 })
 
 
+
+Vue.component('my-todo-item', {
+  template: '<li>{{ title }}<button v-on:click="$emit(\'remove\')">X</button></li>',
+  props: ['title']
+})
+
+
+var todoApp = new Vue({
+  el: '#todo-app',
+  data: {
+    newTodoText: '',
+    todos: [
+      'Do the dishes',
+      'Take out the trash',
+      'Mow the lawn'
+    ]
+  },
+  methods: {
+    addNewTodo: function () {
+      this.todos.push(this.newTodoText)
+      this.newTodoText = ''
+    }
+  }
+})

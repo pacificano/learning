@@ -25,6 +25,24 @@
 <div id="example">
 	<p>{{ message }}</p>
 	<list-example></list-example>
+	<li v-for="(value, key) in videoGame">
+		{{ key }} : {{ value }}
+	</li>
+</div>
+
+<div id="todo-app">
+	<input
+		v-model="newTodoText"
+		v-on:keyup.enter="addNewTodo"
+		placeholder="Add a todo" >
+	<ul>
+		<li
+			is="my-todo-item"
+			v-for="(todo, index) in todos"
+			v-bind:title="todo"
+			v-on:remove="todos.splice(index, 1);"
+		></li>
+	</ul>
 </div>
 
 
