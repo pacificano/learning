@@ -1,0 +1,62 @@
+// Change the grid settings... has to go above the bourbon import
+$visual-grid: true !default
+$visual-grid-color: lightblue !default
+$visual-grid-index: front !default
+$visual-grid-opacity: 0.2 !default
+$grid-columns: 1
+$max-width: 960px
+
+// Import bourbon
+@import "bourbon"
+@import "neat-helpers"
+
+
+
+// Define your breakpoints... has to go after neat-helpers but before neat
+$mobile: new-breakpoint(min-width 320px 1)
+$tablet: new-breakpoint(min-width 720px 1)
+$desktop: new-breakpoint(min-width 1020px 1)
+
+// Width variables
+$mobileWidth: 320px
+$tabletWidth: 720px
+$desktopWidth: 1020px
+
+// Grid variables
+@mixin setMobile
+	width: $mobileWidth
+	padding: 0px 10px
+@mixin setTablet
+	width: $tabletWidth
+	padding: 0px 40px
+@mixin setDesktop
+	width: $desktopWidth
+	padding: 0px 20px
+@mixin setAll
+	margin: 0 auto
+	+media($mobile)
+		@include setMobile
+	+media($tablet)
+		@include setTablet
+	+media($desktop)
+		@include setDesktop
+
+
+
+// Import Neat
+@import "neat"
+
+// 1 - addons
+@import '1-addons/normalize.scss'
+@import '1-addons/reset.scss'
+@import '1-addons/omega-reset.scss'
+
+// 2 - elements
+@import '2-elements/fonts'
+
+// 3 - sections
+@import '3-sections/header'
+
+@import '3-sections/intro'
+
+@import '3-sections/footer'
