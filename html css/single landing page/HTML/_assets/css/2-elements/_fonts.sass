@@ -1,6 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600,700)
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,600,700)
 
-$font-stack: 'Raleway', sans-serif
+$font-stack: 'Lato', sans-serif
 
 body
 	font: 100% $font-stack
@@ -9,18 +9,44 @@ $accent: #EC297B
 $lightgrey: #58595B
 $bgcolor: #EDF2F0
 
+$blackcolor: #0E1726
+$aquacolor: #50E3C2
+
 
 
 // Font styles
 p
+	font-size: 12px
+	color: white
+	font-weight: 400
+	text-align: center
 
 a
+	color: $aquacolor
+
+	&:hover
+		color: shade($aquacolor, 20%)
 
 h1
+	font-size: 16px
+	color: white
+	font-weight: 400
+	text-transform: uppercase
+	text-align: center
 
 h2
+	font-size: 34px
+	color: white
+	font-weight: 300
+	text-transform: uppercase
+	text-align: center
 
 h3
+	font-size: 21px
+	color: $aquacolor
+	font-weight: 400
+	text-transform: uppercase
+	text-align: center
 
 h4
 

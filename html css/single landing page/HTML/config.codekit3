@@ -882,6 +882,30 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/_assets\/img\/general\/background.png": {
+		"ft": 32768,
+		"iS": 1635659,
+		"oA": 0,
+		"oAP": "\/_assets\/img\/general\/background.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/_assets\/img\/general\/elite haven icon.png": {
+		"ft": 32768,
+		"iS": 2558,
+		"oA": 0,
+		"oAP": "\/_assets\/img\/general\/elite haven icon.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/_assets\/img\/general\/watch tv commercial.png": {
+		"ft": 32768,
+		"iS": 8638,
+		"oA": 0,
+		"oAP": "\/_assets\/img\/general\/watch tv commercial.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/_assets\/js\/analytics.js": {
 		"ft": 64,
 		"mi": 1,

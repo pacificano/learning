@@ -1,6 +1,78 @@
-.textContainer
-	+outer-container
-	background-color: red
-	
-	h1
-	p
+body
+	background: url(/_assets/img/general/background.png) center center
+	background-size: cover
+
+@mixin littleContainers
+	width: 360px
+	border: 1px solid $aquacolor
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding-left: 34px
+	padding-right: 34px
+	padding-top: 30px
+	padding-bottom: 30px
+	margin-bottom: 30px
+
+.home
+
+	.blackContainer
+		width: 420px
+		+outer-container
+		background-color: $blackcolor
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		.introText
+			width: 360px
+
+			h1
+			h2
+
+		.bookAStay
+			@include littleContainers
+
+			.text
+				h3
+				p
+			.form
+				form
+					input
+					button
+
+		.stayInformed
+			@include littleContainers
+
+			.text
+				h3
+				p
+			.form
+				button
+
+		.takeACloserLook
+			@include littleContainers
+
+			.text
+				h3
+			.imageText
+				.image
+					height: 122px
+					width: 94px
+					background-color: #7ED321
+				.text
+					p
+			.form
+				button
+
+
+
+.youtubeDiv
+	img
+.brandLogo
+	img
+
+
+
+
+
