@@ -35,13 +35,22 @@
 
 
 form
+	color: $aquacolor
+
 	input
 		width: 290px
 		height: 38px
 		border: 1px solid $aquacolor
 		padding-left: 10px
 		margin-bottom: 10px
-		// background: $blackcolor
+		background: $blackcolor
 
 		&:focus
 			// background: tint($blackcolor, 80%)
+
+		&::placeholder
+			color: $aquacolor
+			text-transform: uppercase
+			font-size: 12px
+			position: relative
+			bottom: 2px

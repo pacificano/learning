@@ -176,7 +176,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -305,8 +304,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -417,7 +414,8 @@ p {
   font-size: 12px;
   color: white;
   font-weight: 400;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 10px; }
 
 a {
   color: #50E3C2; }
@@ -443,7 +441,8 @@ h3 {
   color: #50E3C2;
   font-weight: 400;
   text-transform: uppercase;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 10px; }
 
 body, html {
   height: 100%; }
@@ -469,19 +468,50 @@ button {
   height: 44px;
   background: #50E3C2;
   color: #0E1726;
-  border: 0; }
+  border: 0;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  box-shadow: 0px 0px 20px #50E3C2; }
   button:hover {
-    background: #40b69b; }
+    background: #40b69b;
+    box-shadow: 0px 0px 0px; }
 
-form input {
-  width: 290px;
-  height: 38px;
-  border: 1px solid #50E3C2;
-  padding-left: 10px;
-  margin-bottom: 10px; }
+form {
+  color: #50E3C2; }
+  form input {
+    width: 290px;
+    height: 38px;
+    border: 1px solid #50E3C2;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    background: #0E1726; }
+    form input::-webkit-input-placeholder {
+      color: #50E3C2;
+      text-transform: uppercase;
+      font-size: 12px;
+      position: relative;
+      bottom: 2px; }
+    form input::-moz-placeholder {
+      color: #50E3C2;
+      text-transform: uppercase;
+      font-size: 12px;
+      position: relative;
+      bottom: 2px; }
+    form input:-ms-input-placeholder {
+      color: #50E3C2;
+      text-transform: uppercase;
+      font-size: 12px;
+      position: relative;
+      bottom: 2px; }
+    form input::placeholder {
+      color: #50E3C2;
+      text-transform: uppercase;
+      font-size: 12px;
+      position: relative;
+      bottom: 2px; }
 
 body {
-  background: url(/_assets/img/general/background.png) center center;
+  background: url(/_assets/img/general/background.png) center center fixed;
   background-size: cover; }
 
 .home .blackContainer {
@@ -490,21 +520,40 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-color: #0E1726;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  box-shadow: 0px 0px 20px #0E1726;
+  margin-top: 90px;
+  margin-bottom: 90px; }
   .home .blackContainer::after {
     clear: both;
     content: "";
     display: block; }
   .home .blackContainer .introText {
-    width: 360px; }
+    width: 360px;
+    padding-top: 40px;
+    padding-bottom: 40px; }
   .home .blackContainer .bookAStay {
     width: 360px;
     border: 1px solid #50E3C2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-left: 34px;
     padding-right: 34px;
     padding-top: 30px;
@@ -513,9 +562,16 @@ body {
   .home .blackContainer .stayInformed {
     width: 360px;
     border: 1px solid #50E3C2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-left: 34px;
     padding-right: 34px;
     padding-top: 30px;
@@ -524,15 +580,46 @@ body {
   .home .blackContainer .takeACloserLook {
     width: 360px;
     border: 1px solid #50E3C2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-left: 34px;
     padding-right: 34px;
     padding-top: 30px;
     padding-bottom: 30px;
     margin-bottom: 30px; }
-    .home .blackContainer .takeACloserLook .imageText .image {
-      height: 122px;
-      width: 94px;
-      background-color: #7ED321; }
+    .home .blackContainer .takeACloserLook .imageText {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 30px; }
+      .home .blackContainer .takeACloserLook .imageText .image {
+        height: 122px;
+        width: 94px;
+        background-color: #7ED321; }
+      .home .blackContainer .takeACloserLook .imageText .text {
+        width: 165px; }
+        .home .blackContainer .takeACloserLook .imageText .text p {
+          text-align: left; }
+
+.youtubeDiv {
+  position: absolute;
+  left: 105px;
+  top: 260px; }
+
+.brandLogo {
+  position: absolute;
+  left: 940px;
+  top: 1080px; }

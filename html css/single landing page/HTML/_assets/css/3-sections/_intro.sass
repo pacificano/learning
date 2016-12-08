@@ -1,5 +1,5 @@
 body
-	background: url(/_assets/img/general/background.png) center center
+	background: url(/_assets/img/general/background.png) center center fixed
 	background-size: cover
 
 @mixin littleContainers
@@ -23,9 +23,14 @@ body
 		display: flex
 		flex-direction: column
 		align-items: center
+		box-shadow: 0px 0px 20px $blackcolor
+		margin-top: 90px
+		margin-bottom: 90px
 
 		.introText
 			width: 360px
+			padding-top: 40px
+			padding-bottom: 40px
 
 			h1
 			h2
@@ -56,20 +61,40 @@ body
 			.text
 				h3
 			.imageText
+				display: flex
+				justify-content: space-between
+				width: 100%
+				margin-top: 10px
+				margin-bottom: 30px
+
 				.image
 					height: 122px
 					width: 94px
 					background-color: #7ED321
 				.text
+					width: 165px
+
 					p
+						text-align: left
 			.form
 				button
 
 
 
 .youtubeDiv
+	position: absolute
+	left: 105px
+	top: 260px
+
 	img
+
+
+
 .brandLogo
+	position: absolute
+	left: 940px
+	top: 1080px
+
 	img
 
 
